@@ -9,3 +9,6 @@ Três tecnologias fundamentais para a construção de páginas e aplicações we
 
 > [!NOTE]
 > A HTML e as CSS não podem ser consideradas linguagens de programação, pois uma linguagem de programação envolve estruturas especializadas que dependem do uso de variáveis simples e compostas, condições, laços e até coisas mais complexas como objetos. Por outro lado, essas características estão presentes na linguagem JavaScript. Essa sim é uma Linguagem de Programação.
+
+> [!IMPORTANT]
+> Por favor, considere baixar um editor de código para facilitar o aprendizado dessas linguagens. Recomendo fortemente o Visual Studio Code, disponível [aqui](https://visualstudio.microsoft.com/downloads/).
