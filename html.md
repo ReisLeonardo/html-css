@@ -206,7 +206,7 @@ Além desse atributo de href, temos outros como:
   - external indica que é um link para outro site que não faz parte do site atual
   - nofollow indica que é um link para um site não endossado, como um link pago.
  
- ### Navegações por pastas
+ ### Navegando por pastas
 Caso você tenha tentado abrir um arquivo com o atributo href e ele não apareceu, pode ser que ele não esteja na mesma página de origem. Nesse caso, você precisa retroceder uma página ou até mais de uma. Se você estiver se referindo à pasta atual do servidor, pode usar "./" antes do nome do arquivo. Para se referir à pasta imediatamente superior na hierarquia, utilize "../" para voltar um nível para a pasta mais externa. Essas são práticas comuns de navegação no sistema operacional Linux, então talvez seja útil aprender mais sobre elas.
 
 ### Downloads
