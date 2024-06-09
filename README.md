@@ -12,3 +12,6 @@ Três tecnologias fundamentais para a construção de páginas e aplicações we
 
 > [!IMPORTANT]
 > Por favor, considere baixar um editor de código para facilitar o aprendizado dessas linguagens. Recomendo fortemente o Visual Studio Code, disponível [aqui](https://visualstudio.microsoft.com/downloads/).
+
+Agradecimentos ao(a) ❤️ 
+- @gustavoguanabara
