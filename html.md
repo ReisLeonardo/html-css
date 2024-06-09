@@ -51,13 +51,13 @@ A estrutura dentro das tags não pode conter espaços. Além disso, podemos ter 
 
 Veja mais exemplos de tags na documentação da linguagem [aqui](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-## Caracteres Especiais e Emojis
+## Caracteres especiais e Emojis
 Em HTML, chamamos caracteres especiais e emojis de _HTML Entities_. Confira a tabela abaixo para ver alguns deles. Além disso, você pode encontrar uma lista de emojis no formato Unicode no site da
 [Emojipedia](www.emojipedia.org).
 
 ![Exemplo do PDF do Guanabara - PDF 5 da aula da HTML e CSS pg. 4](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a9341857-f487-4879-aa5d-b8bc8fb7ffbc)
 
-## Imagens, vídeo e aúdio.
+## Imagem, vídeo e aúdio.
 Em HTML, imagens, vídeos e áudios são elementos usados para exibir gráficos, fotografias, clipes de vídeo e conteúdos sonoros em uma página da web.
 
 > [!CAUTION]
@@ -115,22 +115,28 @@ Para inserir vídeos internos (no servidor) em HTML, você pode usar a tag &lt;v
 Inserir vídeos externos é bastante fácil. Basta acessar a opção de compartilhar e copiar o código de incorporação (embed) fornecido pelo serviço de hospedagem do vídeo, e em seguida, colar esse código dentro do elemento &lt;body&gt; do seu documento HTML. Isso é vantajoso, pois economiza espaço de armazenamento em sua hospedagem. No entanto, uma desvantagem é que o vídeo ou o serviço de hospedagem pode estar fora do ar, comprometendo a visualização do seu vídeo. Portanto, é importante analisar qual é a melhor opção para você ou seu cliente.
 
 ### Formato de vídeo
-* .mp4
+* .mp4 - Mais usado
 * .ogg
 * .mpeg
 * .m4v
-* .webm
-* .ogv
+* .webm - Mais usado
+* .ogv - Mais usado
 
 > [!TIP]
 > Um excelente conversor de vídeo para gerar arquivos em diversos formatos e utilizando codecs padronizados é o programa de código aberto (gratuito), chamado [Handbrake](https://handbrake.fr/downloads.php).
 
 ### Como inserir áudio interno e externo
-Lorem Ipsum
+Os princípios que se aplicam a outras mídias também se aplicam ao áudio. Escolher um arquivo de áudio muito pesado pode afetar o carregamento do site. Podemos especificar o áudio utilizando o atributo src, seja ele hospedado localmente ou em outra hospedagem. A declaração de um elemento de áudio é simples.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4459881d-3715-431b-a5ed-153d2028698a)
+
+Agora para mais de uma opção de formato, utilizamos:
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d3bbdc3a-5a03-4911-9f12-8fc7fe2a8b39)
 
 ### Formato de áudio
 * .mp3
-* .wav
+* .wav - Evite, pois é muito pesado!
 * .ogg
 
 ## Imagem favicon
@@ -181,4 +187,32 @@ Já as listas não ordenadas possuem apenas três que são:
 O parâmetro start é utilizado para definir o início da contagem, ele apenas pode receber um valor númerico mesmo se tratando de uma letra do alfabeto.
 
 ## Links (endereços virtuais)
-Lorem Ipsum.
+Os hyperlinks são um dos conceitos mais antigos da história da linguagem HTML. Eles permitem que você ligue um ponto a outro na World Wide Web. Toda vez que você está acessando um site e clica em um local para ir para outra página, outro site ou até para baixar um arquivo, você está interagindo com um hyperlink. Para criar um hyperlink, devemos criar âncoras através da tag &lt;a&gt;. O principal atributo dessa tag é o href, que cria uma referência hipertexto.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/573c002c-5e50-46bc-8b15-37abec63fb92)
+
+Além desse atributo de href, temos outros como:
+* hreflang - Define o idioma do que está por trás do link, é uma boa prática de SEO.
+* target - Define onde o site de destino vai abrir
+  - _blank vai abrir o link em uma nova janela em branco
+  - _self vai abrir o link na janela ou frame atual (padrão)
+  - _top vai desfazer todos os frames e abrir o destino no navegador completo
+  - _parent similar ao uso do _top em uma referência à janela mãe
+  - (nome-do-frame) caso esteja usando frames, indicar o nome da janela a abrir
+* rel - Indica a natureza do destino
+  - next indica que o link é para a próxima parte do documento atual
+  - prev indica que o link é para a parte anterior do documento atual
+  - author indica que é um link para o site do autor do artigo atual
+  - external indica que é um link para outro site que não faz parte do site atual
+  - nofollow indica que é um link para um site não endossado, como um link pago.
+ 
+ ### Navegações por pastas
+Caso você tenha tentado abrir um arquivo com o atributo href e ele não apareceu, pode ser que ele não esteja na mesma página de origem. Nesse caso, você precisa retroceder uma página ou até mais de uma. Se você estiver se referindo à pasta atual do servidor, pode usar "./" antes do nome do arquivo. Para se referir à pasta imediatamente superior na hierarquia, utilize "../" para voltar um nível para a pasta mais externa. Essas são práticas comuns de navegação no sistema operacional Linux, então talvez seja útil aprender mais sobre elas.
+
+### Downloads
+Você também pode criar links para downloads usando âncoras. Veja um exemplo abaixo:
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/aa8ce8de-a9c6-4d3d-88e1-0bdfcf462575)
+
+>[!TIP]
+> Se você quiser saber o que escrever dentro do atributo type de uma âncora de hypertext, você pode consultar a lista oficial da IANA.org disponível [aqui](https://www.iana.org/assignments/media-types/media-types.xhtml).
