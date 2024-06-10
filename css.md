@@ -32,7 +32,7 @@ Manter as folhas de estilo fora do código HTML proporciona uma maior organizaç
 > Nesses exemplos, você aprendeu apenas a trocar a cor da fonte, mas existem muitas outras funções que você pode aplicar na folha de estilo. Elas estão disponíveis nos sites da [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS) e da [W3Schools](https://www.w3schools.com/cssref/index.php).
 
 >[!NOTE]
-> Para aplicar estilos globais a todas as tags, basta usar o seletor universal * no CSS, no mesmo lugar onde você aplicaria estilos ao body. Por exemplo:
+> Para aplicar estilos globais a todas as tags, basta usar o seletor universal * no CSS. Dê sempre preferência deixá-lo no topo, ou seja, acima do h1 no exemplo acima.
 
 ## A importância das cores
 As cores têm um impacto significativo em nossas emoções e comportamentos. A psicologia das cores estuda como as diferentes cores influenciam nossas percepções e sentimentos. Por exemplo, o vermelho pode evocar sensações de urgência ou excitação, enquanto o verde é frequentemente associado à calma e à natureza.
