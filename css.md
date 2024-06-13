@@ -69,8 +69,8 @@ As cores terciárias são criadas misturando uma cor primária com uma cor secun
 
 ### Cores frias e quentes 
 As cores podem ser classificadas como frias ou quentes, dependendo de suas propriedades visuais e emocionais.
-* Cores Quentes: Incluem vermelho, laranja e amarelo. São associadas a sentimentos de energia, calor e entusiasmo, sendo frequentemente usadas para atrair atenção ou criar uma sensação de aconchego.
-* Cores Frias: Incluem azul, verde e violeta. São associadas a sensações de calma, serenidade e tranquilidade, sendo ideais para ambientes relaxantes e serenos.
+* **Cores Quentes**: Incluem vermelho, laranja e amarelo. São associadas a sentimentos de energia, calor e entusiasmo, sendo frequentemente usadas para atrair atenção ou criar uma sensação de aconchego.
+* **Cores Frias**: Incluem azul, verde e violeta. São associadas a sensações de calma, serenidade e tranquilidade, sendo ideais para ambientes relaxantes e serenos.
 
 Na imagem abaixo, podemos ver a divisão entre as cores frias (cool colors) e quentes (warm colors), ajudando a entender melhor suas aplicações e efeitos emocionais em diferentes situações.
 
@@ -78,16 +78,11 @@ Na imagem abaixo, podemos ver a divisão entre as cores frias (cool colors) e qu
 
 ### Harmonia das cores
 Refere-se à combinação equilibrada e agradável de cores, criando uma estética visualmente atraente e coerente. Existem várias formas de alcançar a harmonia das cores, e algumas das mais comuns são:
-* **Harmonia Complementar:** Emprega cores que estão opostas no círculo cromático. Esse contraste forte pode criar um visual vibrante e dinâmico.
-  * Exemplo: Azul, vermelho-laranja e amarelo-laranja.
-* **Harmonia Análoga:** Utiliza cores que são adjacentes no círculo cromático. Essas combinações são naturalmente harmoniosas e proporcionam um efeito suave e agradável.
-  * Exemplo: Azul, azul-verde e verde.
-* **Harmonia Triádica:** Usa três cores equidistantes no círculo cromático, criando um visual vibrante e equilibrado, com bastante contraste e diversidade.
-  * Exemplo: Vermelho, amarelo e azul.
-* **Harmonia Tetrádica:** Inclui duas pares de cores complementares, criando uma paleta rica e diversificada. Pode ser desafiador equilibrar, mas resulta em combinações dinâmicas e atraentes.
-  * Exemplo: Azul e laranja, vermelho e verde.
-* **Harmonia Monocromática:** Usa variações de uma única cor, alterando apenas o brilho e a saturação. Isso cria um visual unificado e elegante.
-  * Exemplo: Vários tons de azul.
+* **Harmonia Complementar:** Emprega cores que estão opostas no círculo cromático. Esse contraste forte pode criar um visual vibrante e dinâmico. Exemplo: Azul, vermelho-laranja e amarelo-laranja.
+* **Harmonia Análoga:** Utiliza cores que são adjacentes no círculo cromático. Essas combinações são naturalmente harmoniosas e proporcionam um efeito suave e agradável. Exemplo: Azul, azul-verde e verde.
+* **Harmonia Triádica:** Usa três cores equidistantes no círculo cromático, criando um visual vibrante e equilibrado, com bastante contraste e diversidade. Exemplo: Vermelho, amarelo e azul.
+* **Harmonia Tetrádica:** Inclui duas pares de cores complementares, criando uma paleta rica e diversificada. Pode ser desafiador equilibrar, mas resulta em combinações dinâmicas e atraentes. Exemplo: Azul e laranja, vermelho e verde.
+* **Harmonia Monocromática:** Usa variações de uma única cor, alterando apenas o brilho e a saturação. Isso cria um visual unificado e elegante. Exemplo: Vários tons de azul.
 
 ## Criação da paleta de cores
 Ter uma paleta de cores bem definida é fundamental para o desenvolvimento de um site, pois ela garante consistência visual, fortalece a identidade da marca e melhora a experiência do usuário. Uma paleta de cores harmoniosa facilita a navegação, destaca elementos importantes e cria uma estética atraente e profissional. O número ideal de cores em uma paleta geralmente varia entre 3 a 5 cores, o que permite variedade suficiente para criar contraste e interesse visual sem sobrecarregar o design.
@@ -95,6 +90,9 @@ Ter uma paleta de cores bem definida é fundamental para o desenvolvimento de um
 * [Crie a sua roda de cores - Adobe Color](https://color.adobe.com/create/color-wheel)
 * [Paletton - Crie uma paleta de cores e visualize como ela ficaria no seus site](https://paletton.com/)
 * [Coolors - Gerador de paletas de cores](https://coolors.co/generate)
+
+>[!NOTE]
+> O design sempre considera três elementos essenciais que devem estar em alta qualidade: imagens, cores e tipografia (representações gráficas).
  
 ## Representação de cores nas CSS
   Nas CSS, as cores podem ser representadas de várias maneiras, permitindo uma flexibilidade considerável na criação de estilos e temas. Aqui estão as formas mais comuns de definir cores em CSS: **Nomes de cor**, **Valores hexadecimais**, **Valores em RGB (Red, Green e Blue)** e **Característica em HSL (Hue, Saturation e Luminosity).**
@@ -126,3 +124,42 @@ Além das configurações de plano de fundo temos outras configurações pontuai
 * margin: auto; Centraliza o conteúdo (responsivo)
 * text-shadow: Sombreaemnto de texto
 * text-align: Alinhamento de texto
+
+>[!TIP]
+> Evite usar fundo preto com texto branco em grandes blocos de texto, pois essa combinação pode causar cansaço visual. Prefira um fundo branco com texto preto, de preferência com fontes não serifadas e com um peso leve (font-weight).
+
+## Fontes
+A escolha de uma boa paleta de cores não é o único aspecto crucial na construção de um site. Também é fundamental selecionar as famílias tipográficas adequadas. As fontes podem transmitir emoções e influenciar a experiência do usuário. Geralmente, é importante priorizar a legibilidade e a clareza ao escolher uma fonte, mas também devemos considerar o efeito desejado. Por exemplo, fontes serifadas podem transmitir tradição e seriedade, enquanto fontes sans-serif são frequentemente associadas à modernidade e simplicidade. Além disso, combinar diferentes tipos de fontes pode adicionar hierarquia e contraste, tornando o conteúdo mais atraente e fácil de navegar.
+
+* **Fontes serifadas** são categorias de fontes clássicas, surgidas na época das prensas de impressão de livros. Tipicamente, os caracteres serifados foram amplamente aplicados em grandes blocos de texto impressos em papel, aproveitando uma característica da nossa percepção: nós não lemos as palavras letra por letra, mas como um conjunto. As serifas têm a capacidade de guiar nossos olhos graças aos pequenos prolongamentos que criam, fazendo com que as letras se "juntem" em palavras. Atualmente, evitamos usar fontes serifadas para apresentar textos longos na Web, pois as tendências modernas favorecem fontes visualmente mais leves. No entanto, as fontes serifadas são bastante usadas em títulos, pois chamam mais atenção devido às suas características distintivas.
+* **Fontes não serifadas**, ou **sans-serif** (do francês "sem serifa"), são fontes que, como o nome sugere, não apresentam serifas. As primeiras fontes dessa categoria surgiram em 1816, mas foram consideradas avançadas demais para a época. Anos depois, ressurgiram em versões melhoradas e vieram para ficar, especialmente na Web. Isso ocorre porque elas são excelentes para exibição em telas e monitores, transmitindo uma sensação de limpeza, clareza e organização.
+* **Fontes monoespaçadas** surgiram como uma variação das fontes serifadas e não serifadas. Elas possuem a característica de ter a mesma largura para todas as letras, garantindo uniformidade no espaçamento.
+* **Fontes script** ou **handwriting** são aquelas que tentam imitar a escrita humana. Seu uso deve ser bem controlado e jamais devem ser aplicadas a textos muito longos, pois causam cansaço visual e se tornam difíceis de ler.
+* **Fontes display** fogem completamente das definições feitas pelas classificações anteriores. Elas são fontes com muitos efeitos visuais, enfeitadas e até mesmo curiosas. Também são chamadas de **fontes comemorativas** e algumas delas sequer representam letras, podendo ser desenhos de animais, objetos, pessoas, personagens de quadrinhos, etc.
+
+### Como aplicar fontes as CSS?
+As fontes em CSS são aplicadas principalmente através da propriedade font-family. Essa propriedade permite que você especifique uma lista de fontes, onde a primeira fonte disponível no dispositivo do usuário será usada. Além disso, você pode ajustar vários aspectos das fontes com outras propriedades CSS, como font-size, font-weight, e font-style.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/94347430-0b16-421a-8ac7-07f2e55fe6db)
+
+A ordem aqui é importante: se a primeira fonte não for encontrada no dispositivo, o navegador tentará carregar a segunda, e assim por diante. O último item na lista é um tipo genérico de fonte. Podemos também fazer um atalho para todos esses comandos utilizando a propriedade font, prestando atenção na ordem dos valores.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/7fac3dca-ae84-4c63-b074-6c656da82262)
+
+1. font-style é o estilo da fonte, por exemplo: italic, normal, oblique etc.
+2. font-variant é a variante da fonte.
+3. font-weight é o peso da fonte, ou seja se ela vai está em negrito ou "mais fina", por exemplo: lighter, normal, bold ou bolder. Nesse caso também são aceitos valores de 100 a 900.
+4. font-size ou line-height é relativo ao tamanho da fonte, geralmente utilizamos px (pixel) ou em (medida recomendada pela W3C).
+5. font-family é relativo a família da fonte.
+
+Além da font-family, você pode usar @font-face para importar fontes externas, por exemplo, do [Google fonts](fonts.google.com) ou [DaFont](dafont.com):
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/c3c6ec81-af8b-440b-9a49-7ddeea7036ac)
+
+Além disso, você pode incorporar um estilo embutido na primeira linha da sua tag &lt;style&gt;, seja dentro do próprio arquivo .html ou em uma folha de estilo separada (.css).
+
+>[!NOTE]
+> Os formatos geralmente aceitos são o opentype (.otf) e  o truetype (.ttf), mas também existem formatos como embedded-opentype, truetype-aat (Apple Advanced Typography) e .svg (muito usado com legendas)
+
+>[!TIP]
+> Se você quiser extrair uma fonte, uma extensão do Google Chrome muito útil é a [Ninja Fonts](https://www.fonts.ninja/). Você também pode encontrar mais detalhes sobre as fontes que estão em imagens em sites como [WhatFontIs (a melhor das opções)](whatfontis.com), [FontSquirrel](fontsquirrel.com) ou [MyFonts.com](myfonts.com). Recomendo utilizar essas ferramentas em conjunto para obter sempre o melhor resultado.
