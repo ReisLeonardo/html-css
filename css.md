@@ -34,7 +34,7 @@ Manter as folhas de estilo fora do código HTML proporciona uma maior organizaç
 >[!NOTE]
 > Para aplicar estilos globais a todas as tags, basta usar o seletor universal * no CSS. Dê sempre preferência deixá-lo no topo, ou seja, acima do h1 no exemplo acima.
 
-## A importância das cores
+# Cores
 As cores têm um impacto significativo em nossas emoções e comportamentos. A psicologia das cores estuda como as diferentes cores influenciam nossas percepções e sentimentos. Por exemplo, o vermelho pode evocar sensações de urgência ou excitação, enquanto o verde é frequentemente associado à calma e à natureza.
 
 Cor | Associada a | Usar em | Evitar
@@ -128,7 +128,7 @@ Além das configurações de plano de fundo temos outras configurações pontuai
 >[!TIP]
 > Evite usar fundo preto com texto branco em grandes blocos de texto, pois essa combinação pode causar cansaço visual. Prefira um fundo branco com texto preto, de preferência com fontes não serifadas e com um peso leve (font-weight).
 
-## Fontes
+# Fontes
 A escolha de uma boa paleta de cores não é o único aspecto crucial na construção de um site. Também é fundamental selecionar as famílias tipográficas adequadas. As fontes podem transmitir emoções e influenciar a experiência do usuário. Geralmente, é importante priorizar a legibilidade e a clareza ao escolher uma fonte, mas também devemos considerar o efeito desejado. Por exemplo, fontes serifadas podem transmitir tradição e seriedade, enquanto fontes sans-serif são frequentemente associadas à modernidade e simplicidade. Além disso, combinar diferentes tipos de fontes pode adicionar hierarquia e contraste, tornando o conteúdo mais atraente e fácil de navegar.
 
 * **Fontes serifadas** são categorias de fontes clássicas, surgidas na época das prensas de impressão de livros. Tipicamente, os caracteres serifados foram amplamente aplicados em grandes blocos de texto impressos em papel, aproveitando uma característica da nossa percepção: nós não lemos as palavras letra por letra, mas como um conjunto. As serifas têm a capacidade de guiar nossos olhos graças aos pequenos prolongamentos que criam, fazendo com que as letras se "juntem" em palavras. Atualmente, evitamos usar fontes serifadas para apresentar textos longos na Web, pois as tendências modernas favorecem fontes visualmente mais leves. No entanto, as fontes serifadas são bastante usadas em títulos, pois chamam mais atenção devido às suas características distintivas.
@@ -163,3 +163,48 @@ Além disso, você pode incorporar um estilo embutido na primeira linha da sua t
 
 >[!TIP]
 > Se você quiser extrair uma fonte, uma extensão do Google Chrome muito útil é a [Ninja Fonts](https://www.fonts.ninja/). Você também pode encontrar mais detalhes sobre as fontes que estão em imagens em sites como [WhatFontIs (a melhor das opções)](whatfontis.com), [FontSquirrel](fontsquirrel.com) ou [MyFonts.com](myfonts.com). Recomendo utilizar essas ferramentas em conjunto para obter sempre o melhor resultado.
+
+# Seletores personalizados
+Às vezes, precisamos ser mais específicos quanto às modificações que queremos fazer nos elementos. É aí que entram os seletores personalizados. Antes de falar sobre isso, precisamos entender que utilizamos o id no HTML e # no CSS para identificar um elemento. Segundo a regra da W3C, só devemos ter um id por seletor em um documento. Já se quisermos agrupar várias características que serão usadas em diversos elementos específicos, podemos usar class no HTML e . no CSS. Veja abaixo como isso funciona:
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a4ba1102-19d8-4de9-b97a-f84c423acb55) (Efeito visual)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/86805582-725a-474d-80d6-ea20dfaef193) (HTML)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/1bb8fc41-d042-4dbf-a72c-0e1000e5eaca) (CSS)
+
+A hierarquia em CSS é baseada em IDs e classes. Seletores de ID (#id) têm maior prioridade que seletores de classe (.classe). Portanto, tudo que estiver dentro de um ID será considerado primeiro que tudo que estiver dentro de uma classe. Preste atenção à ordem e especificidade ao inserir os parâmetros.
+
+>[!NOTE]
+> Evite dar nomes às classes e ids baseados na aparência visual dos elementos. Em vez disso, nomeie-os de acordo com a funcionalidade ou propósito dos elementos.
+
+>[!TIP]
+> Podemos utilizar a tag &lt;span&gt; para fazer configurações pontuais em determinados trechos de texto. Tudo o que estiver dentro do &lt;span&gt; será considerado como pertencente à classe ou id especificado. Além disso, podemos adicionar mais de uma classe dentro do atributo class="x y" separando os nomes das classes por espaços.
+
+## Pseudo-classe
+Utilizamos o sinal de : para determinar uma pseudo-classe, que é aplicada a um elemento ou classe, relativa ao seu estado. Por exemplo, ao utilizar :hover, podemos definir um estilo que será aplicado quando o usuário passar o mouse sobre o elemento. Existem várias pseudo-classes que podemos usar além de :hover. Veja alguns exemplos [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes).
+* :hover : Aplica o estilo quando o mouse está sobre o elemento.
+* :focus : Aplica o estilo quando o elemento está focado (ex.: um campo de texto clicado).
+* :active : Aplica o estilo quando o elemento está sendo clicado.
+* :visited : Aplica o estilo a links que já foram visitados.
+* :nth-child(n) : Aplica o estilo ao enésimo filho de um elemento pai.
+
+>[!NOTE]
+> Se criarmos uma &lt;div&gt;, que é um espaço em branco funcionando como um contêiner, podemos trabalhar com seletores internos utilizando 'filhos' ou children. Isso funciona da seguinte forma: div > p. Isso significa que o estilo será aplicado a todos os elementos &lt;p&gt; que são filhos diretos da &lt;div&gt;.
+
+>[!TIP]
+> text-decoration: none; irá remover todos os efeitos do texto, inclusive o sublinhado dos links.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/9f525f88-8904-4ed5-a4b0-2d703c14e351)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/f7755c48-ac06-4a2f-928d-aa8cbeb7f2a9)
+
+Utilizar seletores de filhos é importante para aplicar estilos de maneira específica e organizada, evitando a necessidade de classes adicionais desnecessárias. Isso permite um código CSS mais limpo e fácil de manter, garantindo que os estilos sejam aplicados somente onde desejado.
+
+## Pseudo-elementos
+São usados em CSS para aplicar estilos a partes específicas de elementos sem precisar adicionar classes ou IDs adicionais ao HTML. Eles permitem selecionar e estilizar subpartes de elementos, oferecendo um controle mais refinado sobre a aparência do conteúdo. Utilizamos o sinal :: para pseudo-elementos.
+* ::before e ::after são usados para inserir conteúdo antes ou depois do conteúdo real de um elemento. Eles são frequentemente utilizados para adicionar ícones, gráficos ou texto decorativo.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/030560a8-f443-4675-9372-4b9ddbe21baa)
+
+Confira mais exemplos [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements).
