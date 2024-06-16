@@ -1,0 +1,152 @@
+@charset "UTF-8";
+/* Regra @charset caso haja problemas com acentuação ou línguas com outros alfabetos */
+
+@font-face {
+    font-family: fonte;
+    src: url(fontes/idroid.otf);
+}
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+}
+
+header {
+    background-image: linear-gradient(to bottom, #04BF8A, #03A64A, #025940);
+    color: white;
+    padding: 8px;
+}
+
+header > h1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header > p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+nav {
+    text-align: left;
+}
+
+nav > a {
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+nav > a:hover {
+    padding: 10px;
+    background-color:#04BF8A;
+    color:#025940;
+}
+
+body {
+    background-color:bisque;
+}
+
+a {
+    text-decoration: none;
+    color:#025940;
+    font-weight: 600;
+}
+
+.elaborado::after {
+    content: ' 🔗';
+    
+}
+
+section.branco {
+    margin: auto;
+    width: 850px;
+    padding: 10px;
+    background-color: whitesmoke;
+}
+
+#bugdroid {
+    margin-left: 250px;
+    width: 300px;
+}
+
+section.verde {
+    margin: auto;
+    width: 850px;
+    padding: 10px;
+    background-color: #025940;
+}
+
+section > h1 {
+    font-family: fonte;
+    padding: 15px;
+    margin-left: 10px;
+    font-size: 2em;
+}
+
+section > h2 {
+    font-family: fonte;
+    font-size: 1em;
+    margin: 10px;
+    text-indent: 10px;
+    background-image: linear-gradient(to right, aquamarine, rgb(91, 142, 91), whitesmoke);
+}
+
+section > p {
+    text-indent: 30px;
+    margin: 10px;
+}
+
+section > img {
+    width: 100%;
+}
+
+iframe {
+    margin-left: 15%;
+    padding: 15px;
+}
+
+section#final {
+    margin-bottom: 50px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#content-final {
+    width: 800px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    background-color: rgb(94, 212, 129);
+    border-radius: 40px 40px 20px 20px;
+}
+
+#content-final > h3 {
+    padding: 10px;
+    color: white;
+    background-color: #03A64A;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+#list1 {
+    display: inline-block;
+}
+
+#list2 {
+    margin-left: 250px;
+    display: inline-block;
+}
+
+li::before {
+    content: '✔  ';
+}
+
+footer {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    background-color: #025940;
+}
