@@ -34,6 +34,73 @@ Manter as folhas de estilo fora do código HTML proporciona uma maior organizaç
 >[!NOTE]
 > Para aplicar estilos globais a todas as tags, basta usar o seletor universal * no CSS. Dê sempre preferência deixá-lo no topo, ou seja, acima do h1 no exemplo acima.
 
+# Box model
+É um conceito fundamental nas CSS que descreve a estrutura de elementos na web. Cada elemento é representado como uma caixa retangular, e o Box Model define como o espaço é distribuído ao redor do conteúdo de um elemento. Essa estrutura é composta por cinco áreas principais:
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/168866cd-5a32-4bee-a513-ce6bc6eafce3)
+
+1. **Content (Conteúdo)**: É a área onde o conteúdo, como texto ou imagens, é exibido. O tamanho desta área pode ser definido pelas propriedades width e height.
+2. **Padding (Preenchimento)**: É o espaço entre o conteúdo e a borda. Aumentar o padding expande a caixa do elemento, mas não afeta a cor de fundo ou o tamanho total da caixa. O padding pode ser definido individualmente para cada lado (padding-top, padding-right, padding-bottom, padding-left) ou de forma abreviada (padding).
+3. **Border (Borda)**: É a linha ao redor do padding e conteúdo. A borda pode ter largura, estilo e cor específicos, definidos pelas propriedades border-width, border-style e border-color. Assim como o padding, a borda pode ser ajustada individualmente para cada lado ou de forma abreviada (border).
+4. **Outline**: É a linha para fora do border.
+5. **Margin (Margem)**: É o espaço entre a borda do elemento e os elementos vizinhos. Margens negativas são permitidas e podem causar sobreposição de elementos. As margens também podem ser definidas individualmente para cada lado (margin-top, margin-right, margin-bottom, margin-left) ou de forma abreviada (margin).
+
+>[!NOTE]
+> Para centralizar uma caixa, use a seguinte declaração no seu seletor: margin: auto;
+
+>[!TIP]
+> A ordem para as duas configurações é sempre a mesma para as shorthands (border e outline): largura(width), estilo(style) e cor(color).
+
+>[!TIP]
+> Ao falar de padding e margin nas CSS, podemos imaginar um relógio, seguindo o sentido horário para determinar as direções: começando pelo topo (top), depois direita (right), inferior (bottom) e esquerda (left). Quando você especifica um único valor, ele será aplicado de forma uniforme em todas as direções (topo, direita, inferior e esquerda). Quando você fornece dois valores, o primeiro valor será aplicado ao topo e ao inferior, enquanto o segundo valor será aplicado às laterais (direita e esquerda).
+
+## Tipos de caixa
+Nas CSS, os elementos são classificados em dois tipos principais de caixa: block-level e inline-level. Cada tipo possui características distintas que influenciam como os elementos são renderizados e como ocupam espaço na página.
+
+### Block-level Elements
+Os elementos de nível de bloco (block-level) são aqueles que ocupam toda a largura disponível do contêiner pai, forçando uma quebra de linha antes e depois do elemento. Exemplos comuns de elementos de nível de bloco incluem &lt;address&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;blockquote&gt;, &lt;canvas&gt;, &lt;dd&gt;, &lt;div&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;fieldset&gt;, &lt;figcaption&gt;, &lt;figure&gt;, &lt;footer&gt;, &lt;form&gt;, &lt;h1&gt; - &lt;h6&gt;, &lt;header&gt;, &lt;hr&gt;, &lt;li&gt;, &lt;main&gt;, &lt;nav&gt;, &lt;noscript&gt;, &lt;ol&gt;, &lt;p&gt;, &lt;pre&gt;, &lt;section&gt;, &lt;table&gt;, &lt;tfoot&gt;, &lt;ul&gt;, &lt;video&gt; entre outros.
+
+* Sempre começam em uma nova linha.
+* Ocupam toda a largura disponível do contêiner pai.
+* Podem ter width, height, margin, padding e border aplicados.
+* Podem conter outros elementos block-level ou inline-level.
+
+### Inline-level Elements
+Os elementos de nível de linha (inline-level) são aqueles que não iniciam uma nova linha e apenas ocupam o espaço necessário para o conteúdo. Eles são renderizados na mesma linha, ao lado de outros elementos inline. Exemplos comuns de elementos de nível de linha incluem &lt;a&gt;, &lt;abbr&gt;, &lt;acronym&gt;, &lt;b&gt;, &lt;bdo&gt;, &lt;br&gt;, &lt;button&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;dfn&gt;, &lt;em&gt;, &lt;i&gt;, &lt;img&gt;, &lt;input&gt;, &lt;kbd&gt;, &lt;label&gt;, &lt;map&gt;, &lt;object&gt;, &lt;output&gt;, &lt;q&gt;, &lt;samp&gt;, &lt;script&gt;, &lt;select&gt;, &lt;small&gt;, &lt;span&gt;, &lt;strong&gt;, &lt;sub&gt;, &lt;textarea&gt;, &lt;tt&gt;, &lt;var&gt;, entre outros.
+
+* Não começam em uma nova linha.
+* Ocupam apenas o espaço necessário para o conteúdo.
+* As propriedades width e height geralmente não têm efeito.
+* Podem ter margin, padding (apenas nas direções esquerda e direita) e border aplicados.
+* Podem conter apenas outros elementos inline-level.
+
+## Grouping Tags e Semantic Tags
+As grouping tags são usadas para agrupar e organizar o conteúdo em blocos lógicos, ajudando a estruturar o layout de uma página web. Essas tags não carregam significado semântico específico e são mais utilizadas para propósitos de layout e formatação.
+* **&lt;div&gt;**: Utilizada para agrupar outros elementos. Serve como um contêiner genérico que não adiciona nenhum estilo ou semântica por padrão. É frequentemente usada para aplicar estilos CSS ou para trabalhar com JavaScript.
+* **&lt;span&gt;**: Similar ao &lt;div&gt;, mas é um contêiner inline. Usada para aplicar estilos a partes específicas do texto ou para agrupar elementos inline.
+
+
+As semantic tags foram introduzidas no HTML5 para adicionar significado ao conteúdo, melhorando a acessibilidade e a otimização para motores de busca. Essas tags indicam claramente o propósito do conteúdo que envolvem, tornando o código mais legível e compreensível tanto para desenvolvedores quanto para navegadores e leitores de tela.
+* **&lt;header&gt;**: Cria áreas relativas a cabeçalhos. Pode ser o cabeçalho principal de um site ou até mesmo o cabeçalho de uma seção ou artigo. Normalmente inclui títulos &lt;h1&gt; - &lt;h6&gt; e subtítulos. Podem também conter menus de navegação, o &lt;nav&gt;.
+* **&lt;main&gt;**: É um agrupador usado para delimitar o conteúdo principal do nosso site. Normalmente concentra as seções, artigos e conteúdos periféricos.
+* **&lt;section&gt;**: Cria seções para sua página. Ela pode conter o conteúdo diretamente no seu corpo ou dividir os conteúdos em artigos com conteúdos específicos. Segundo a documentação oficial da W3C, "uma seção é um agrupamento temático de conteúdos, tipicamente com um cabeçalho".
+* **&lt;article&gt;**: É um elemento que vai conter um conteúdo que pode ser lido de forma independente e dizem respeito a um mesmo assunto. Podemos usar um &lt;article&gt; para delimitar um post de blog ou fórum, uma notícia, etc.
+* **&lt;aside&gt;**: Delimita um conteúdo periférico e complementar ao conteúdo principal de um artigo ou seção. Normalmente um conteúdo &lt;aside&gt; está posicionado ao lado de um determinado texto ou até mesmo no meio dele, exatamente como fizemos no bloco de texto apresentado anteriormente, falando sobre "MÚLTIPLOS NÍVEIS".
+* **&lt;footer&gt;**: Cria um rodapé para o site inteiro, seção ou artigo. É um conteúdo que não faz parte diretamente do conteúdo nem é um conteúdo periférico (o que caracteriza um &lt;aside&gt;), mas possui informações sobre autoria do conteúdo, links adicionais, mapa do site, documentos relacionados.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/689262c6-2536-4424-964e-f1075c181eb7)
+
+>[!NOTE]
+> É possível ter um ou mais &lt;article&gt; dentro de uma &lt;section&gt; ou até mesmo criar &lt;section&gt; dentro de um &lt;article&gt;, a isso chamamos de aninhamento. Não existem limitações para a sua criatividade!
+
+>[!TIP]
+> Podemos adicionar sombras e arredondar elementos usando os comandos box-shadow e border-radius, respectivamente. Para criar bordas personalizadas, utilize o comando border-image.
+
+### Importante para a(o)
+* **Acessibilidade**: Melhora a experiência de usuários que dependem de tecnologias assistivas, como leitores de tela.
+* **SEO**: Ajuda os motores de busca a entender melhor a estrutura e o conteúdo da página.
+* **Manutenção**: Torna o código mais legível e organizado, facilitando a manutenção e a colaboração entre desenvolvedores.
+
 # Cores
 As cores têm um impacto significativo em nossas emoções e comportamentos. A psicologia das cores estuda como as diferentes cores influenciam nossas percepções e sentimentos. Por exemplo, o vermelho pode evocar sensações de urgência ou excitação, enquanto o verde é frequentemente associado à calma e à natureza.
 
