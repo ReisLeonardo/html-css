@@ -34,6 +34,21 @@ Manter as folhas de estilo fora do código HTML proporciona uma maior organizaç
 >[!NOTE]
 > Para aplicar estilos globais a todas as tags, basta usar o seletor universal * no CSS. Dê sempre preferência deixá-lo no topo, ou seja, acima do h1 no exemplo acima.
 
+# Planejando um projeto
+Tudo começa com a criação do que chamamos de _wireframe_, onde planejamos a estrutura e o comportamento do site. Este wireframe serve como base para o planejamento dos elementos que comporão a página.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/50debdb0-7ac7-46f9-83a5-a3e02ddfb0d4)
+
+>[!TIP]
+> Uma ferramenta excelente para projetar seus layouts, seja para sites, aplicativos desktop ou até mesmo apps de celular, é o [MockFlow](https://mockflow.com/). Embora a versão gratuita tenha algumas limitações, ela permite visualizar como o site ficará antes de começar a codificar.
+
+Outro detalhe importante a ser considerado é a responsividade. Mesmo que tenhamos optado por criar um projeto simples, não abriremos mão da versatilidade. Queremos que nosso site possa ser visualizado em dispositivos com diferentes tamanhos de tela. Chamamos essa característica de responsividade. Um site responsivo é capaz de adaptar o tamanho de seus componentes para manter a plena visibilidade em qualquer tela. Geralmente, utilizamos min-width: 400px; (para telas pequenas) e max-width: 800px; (para telas muito grandes) para o elemento &lt;main&gt;.
+
+>[!TIP]
+> Também é possível aplicar outras técnicas para aumentar ainda mais a capacidade de adaptação do conteúdo, como as media queries com a regra @media e as caixas flexíveis utilizando flexbox.
+
+Em seguida, decidiremos a paleta de cores a ser utilizada. Por fim, escolheremos as fontes para os destaques principais e para o texto padrão.
+
 # Box model
 É um conceito fundamental nas CSS que descreve a estrutura de elementos na web. Cada elemento é representado como uma caixa retangular, e o Box Model define como o espaço é distribuído ao redor do conteúdo de um elemento. Essa estrutura é composta por cinco áreas principais:
 
@@ -248,6 +263,9 @@ A hierarquia em CSS é baseada em IDs e classes. Seletores de ID (#id) têm maio
 >[!TIP]
 > Podemos utilizar a tag &lt;span&gt; para fazer configurações pontuais em determinados trechos de texto. Tudo o que estiver dentro do &lt;span&gt; será considerado como pertencente à classe ou id especificado. Além disso, podemos adicionar mais de uma classe dentro do atributo class="x y" separando os nomes das classes por espaços.
 
+>[!TIP]
+> Existe também um seletor especial nas CSS, o asterisco (*). Ele tem uma função importante, pois aplica uma configuração padrão a todos os elementos do código HTML ao qual o estilo está sendo aplicado. Geralmente, utilizamos esse seletor para definir background-color, margin: 0px; e padding: 0px;, criando um layout mais personalizado que cubra toda a tela.
+
 ## Pseudo-classe
 Utilizamos o sinal de : para determinar uma pseudo-classe, que é aplicada a um elemento ou classe, relativa ao seu estado. Por exemplo, ao utilizar :hover, podemos definir um estilo que será aplicado quando o usuário passar o mouse sobre o elemento. Existem várias pseudo-classes que podemos usar além de :hover. Veja alguns exemplos [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-classes).
 * :hover : Aplica o estilo quando o mouse está sobre o elemento.
@@ -267,6 +285,15 @@ Utilizamos o sinal de : para determinar uma pseudo-classe, que é aplicada a um 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/f7755c48-ac06-4a2f-928d-aa8cbeb7f2a9)
 
 Utilizar seletores de filhos é importante para aplicar estilos de maneira específica e organizada, evitando a necessidade de classes adicionais desnecessárias. Isso permite um código CSS mais limpo e fácil de manter, garantindo que os estilos sejam aplicados somente onde desejado.
+
+## Declarando uma variável
+Embora CSS não seja uma linguagem de programação, podemos declarar variáveis que facilitam muito nosso trabalho. Para criar variáveis para nossas configurações, devemos definir uma área de definições dentro do estilo usando a pseudo-classe :root. Essa pseudo-classe define configurações na raiz do documento, aplicando-as a todo o documento.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/54030cb0-b7c3-46e6-8e27-60c3ba3a947b)
+
+A partir de agora, definir cores e fontes em nossos elementos HTML ficará mais fácil e personalizável, utilizando a função var().
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/0c4252a3-01bd-45f7-a673-f99099df1088)
 
 ## Pseudo-elementos
 São usados em CSS para aplicar estilos a partes específicas de elementos sem precisar adicionar classes ou IDs adicionais ao HTML. Eles permitem selecionar e estilizar subpartes de elementos, oferecendo um controle mais refinado sobre a aparência do conteúdo. Utilizamos o sinal :: para pseudo-elementos.
