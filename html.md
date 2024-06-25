@@ -216,3 +216,26 @@ Você também pode criar links para downloads usando âncoras. Veja um exemplo a
 
 >[!TIP]
 > Se você quiser saber o que escrever dentro do atributo type de uma âncora de hypertext, você pode consultar a lista oficial da IANA.org disponível [aqui](https://www.iana.org/assignments/media-types/media-types.xhtml).
+
+## Tabelas
+As tabelas em HTML são usadas para organizar e apresentar dados em formato tabular. Elas são especialmente úteis para exibir informações estruturadas, como horários, listas de preços, resultados de pesquisa, entre outros. 
+
+>[!Warning]
+> Não devemos usá-las para criar a estrutura do site, pois o HTML5 é semântico e já realiza essa função. Antigamente, a construção do site era feita com tabelas. Hoje, essa organização é feita pelo CSS, como já sabemos.
+
+A hierarquia de uma tabela simples segue a ordem da lista abaixo:
+1. &lt;table&gt;: Define o elemento da tabela.
+2. &lt;caption&gt;: Define uma legenda para o topo da tabela.
+3. &lt;thead&gt;: Define a cabeça da tabela
+4. &lt;tbody&gt;: Define o corpo da tabela.
+5. &lt;tfoot&gt;: Define o rodapé da tabela.
+6. &lt;tr&gt; (table row): Define uma linha da tabela.
+7. &lt;th&gt; (table header): Define uma célula de cabeçalho, geralmente usada para títulos de colunas ou linhas.
+8. &lt;td&gt; (table data): Define uma célula de dados.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/ff4c9e90-54f3-44db-954e-e51f75cc0272)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6112448c-0f46-421a-8b09-1ea28e630cb5)
+
+>[!Note]
+> Nossa tabela não possui cores nem divisões, que seriam ideais para uma tabela bem formatada. No [repositório sobre CSS](https://github.com/ReisLeonardo/html-css-js/blob/main/css.md), ensino como deixá-las mais atraentes.
