@@ -302,3 +302,50 @@ São usados em CSS para aplicar estilos a partes específicas de elementos sem p
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/030560a8-f443-4675-9372-4b9ddbe21baa)
 
 Confira mais exemplos [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements).
+
+## Tabelas
+As tabelas em CSS são estilizadas para melhorar a aparência e a legibilidade dos dados tabulares em uma página web. Utilizando CSS, podemos adicionar cores, bordas, espaçamento e outras características visuais que tornam as tabelas mais atraentes e fáceis de ler. Aqui estão alguns aspectos importantes sobre a estilização de tabelas com CSS:
+
+* **width:** A propriedade width define a largura de um elemento. Pode ser especificada em várias unidades, como pixels (px), porcentagem (%), ems (em), rems (rem), entre outras. No contexto de tabelas, pode ser usada para ajustar a largura de toda a tabela ou de colunas específicas.
+* **border-collapse:** A propriedade border-collapse é usada para definir se as bordas das células de uma tabela devem ser colapsadas em uma única borda ou separadas. Tem dois valores principais:
+   - collapse: Colapsa as bordas de tabelas adjacentes, removendo o espaço entre elas e combinando as bordas em uma única borda.
+   - separate: Mantém as bordas das células separadas, criando um espaço entre elas (padrão).
+* **border:** A propriedade border é uma abreviação que permite definir o estilo, a largura e a cor da borda de um elemento em uma única linha. No contexto de tabelas, é frequentemente usada para adicionar bordas às células (<th> e <td>) e à própria tabela.
+* **text-align:** A propriedade text-align define o alinhamento horizontal do conteúdo de um elemento de bloco, como texto e outros elementos inline dentro de um <th> ou <td>. Os valores comuns são:
+  - left: Alinha o texto à esquerda (padrão).
+  - right: Alinha o texto à direita.
+  - center: Centraliza o texto.
+  - justify: Justifica o texto, ajustando o espaçamento para que o texto ocupe toda a largura disponível.
+* **vertical-align:** A propriedade vertical-align define o alinhamento vertical do conteúdo dentro de um elemento de linha de tabela (<td> ou <th>) ou inline-block. Os valores comuns são:
+  - top: Alinha o conteúdo ao topo da célula.
+  - middle: Alinha o conteúdo ao meio da célula (padrão para tabelas).
+  - bottom: Alinha o conteúdo à base da célula.
+  - baseline: Alinha o conteúdo com a linha de base do texto dos elementos adjacentes.
+
+ ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/7a3dfd9b-e757-4c9b-bac2-b1166608eadf)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4755fe31-003b-4ec0-aed7-57b30712ebe8)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6720be2f-a747-4458-9c6b-c9132817cc5f)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/82f2ec26-5255-4bfb-9544-993c5ab525af)
+
+### Efeito zebrado
+Para criar um efeito zebrado usamos a pseudo-classe --> :nth-child(nº de linhas). Vejamos um exemplo:
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/9756c536-8a45-40b8-9629-6cbc132b748e)
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/515d8783-1240-4282-8143-2c0f74f8a23b)
+
+### Responsividade de tabelas
+Quando se trata de tabelas, a responsividade é essencial para garantir que os dados sejam apresentados de forma clara e acessível em dispositivos com diferentes tamanhos de tela. Uma técnica comum para tornar tabelas responsivas é envolver a tabela em um contêiner &lt;div&gt; e ajustar seu estilo usando a propriedade overflow.
+
+**Envolvendo a Tabela em um Contêiner &lt;div&gt;:**
+Envolver a tabela em um contêiner &lt;div&gt; permite aplicar estilos de rolagem quando a tabela excede a largura da tela do dispositivo. Isso é especialmente útil em dispositivos móveis onde o espaço horizontal é limitado.
+
+**Usando overflow**
+A propriedade overflow é usada para controlar o comportamento de rolagem do conteúdo dentro de um contêiner. As opções mais comuns são:
+
+* overflow-x: Controla a rolagem horizontal. Para tabelas, overflow-x é frequentemente usado para permitir a rolagem horizontal.
+* overflow-y: Controla a rolagem vertical.
+* overflow: Controla a rolagem em ambas as direções.
