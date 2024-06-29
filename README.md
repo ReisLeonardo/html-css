@@ -14,5 +14,8 @@ Três tecnologias fundamentais para a construção de páginas e aplicações we
 ## JavaScript
 É uma linguagem de programação que permite adicionar interatividade e comportamento dinâmico às páginas web. Com JavaScript, você pode criar funcionalidades como animações, formulários interativos, jogos, validação de dados, manipulação de conteúdo em tempo real e comunicação com servidores. Ele é essencial para desenvolver aplicações web modernas e dinâmicas.
 
-> [!NOTE]
+>[!NOTE]
 > A HTML e as CSS não podem ser consideradas linguagens de programação, pois uma linguagem de programação envolve estruturas especializadas que dependem do uso de variáveis simples e compostas, condições, laços e até coisas mais complexas como objetos. Por outro lado, essas características estão presentes nas linguagens JavaScript e PHP. Essas sim são Linguagens de Programação.
+
+>[!TIP]
+> Navegando por pastas: se você tentou abrir um arquivo e ele não apareceu, pode ser que ele não esteja na mesma localização. Nesse caso, você precisa retroceder uma ou mais páginas. Para referenciar a pasta atual do servidor, utilize "./" antes do nome do arquivo. Para referir-se à pasta imediatamente superior na hierarquia, utilize "../" para voltar um nível para a pasta externa. Essas são práticas comuns de navegação no sistema operacional Linux, então pode ser útil aprender mais sobre elas.
