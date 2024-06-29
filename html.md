@@ -231,7 +231,7 @@ Você também pode criar links para downloads usando âncoras. Veja um exemplo a
 > Se você quiser saber o que escrever dentro do atributo type de uma âncora de hypertext, você pode consultar a lista oficial da IANA.org disponível [aqui](https://www.iana.org/assignments/media-types/media-types.xhtml).
 
 ## Tabelas
-As tabelas em HTML são usadas para organizar e apresentar dados em formato tabular. Elas são especialmente úteis para exibir informações estruturadas, como horários, listas de preços, resultados de pesquisa, entre outros. 
+As tabelas na HTML são usadas para organizar e apresentar dados em formato tabular. Elas são especialmente úteis para exibir informações estruturadas, como horários, listas de preços, resultados de pesquisa, entre outros. 
 
 >[!Warning]
 > Não devemos usá-las para criar a estrutura do site, pois o HTML5 é semântico e já realiza essa função. Antigamente, a construção do site era feita com tabelas. Hoje, essa organização é feita pelo CSS, como já sabemos.
