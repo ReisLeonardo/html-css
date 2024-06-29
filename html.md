@@ -2,9 +2,9 @@
 É organizada em uma série de elementos e tags que definem o conteúdo e a estrutura de uma página web. Os arquivos dessa linguagem possuem a extensão (.html). 
 O exemplo abaixo ilustra a estrutura essencial de um documento HTML, incluindo a declaração do tipo de documento, o cabeçalho com metadados e o corpo com o conteúdo visível:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6833ed84-bf4a-49c7-9f99-9aad7343ccf3)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/fd15612a-77fb-4b33-9c40-884dda7a579d) (Como é o código escrito)
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/fd15612a-77fb-4b33-9c40-884dda7a579d)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6833ed84-bf4a-49c7-9f99-9aad7343ccf3) (Como é o efeito visual)
 
 * Declaração do Tipo de Documento: &lt;!DOCTYPE html&gt; indica ao navegador que o documento é um arquivo HTML5.
 * Elemento: &lt;html&gt; indica o elemento raiz que envolve todo o conteúdo da página.
@@ -27,15 +27,18 @@ Exemplos de tags dentro do &lt;body&gt;:
 - &lt;div&gt;: Define uma seção ou divisão no documento.
 - &lt;span&gt;: Define uma seção de texto em linha.
 
+>[!IMPORTANT]
+> Antes de continuar lendo este material, recomendo que você baixe um editor de código ou um ambiente de desenvolvimento integrado (IDE). Eu costumo usar o [Visual Studio Code](https://code.visualstudio.com/download) para HTML, mas sinta-se à vontade para escolher o que preferir.
+
 ## As TAGs
 HTML funciona com base em tags, sendo que a grande maioria delas possui abertura e fechamento com colchetes angulares, os famosos < (less than) e > (greater than). 
 A estrutura dentro das tags não pode conter espaços. Além disso, podemos ter elementos com atributos, valores e conteúdo:
 
-![Exemplo do PDF do Guanabara - PDF 3 da aula da HTML e CSS pg. 4](https://github.com/ReisLeonardo/html-css-js/assets/89877899/9cf5fc12-db3a-4a52-b094-adb47b164506)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4125a51b-ab75-4428-8a3f-0f751f9b6264)
 
-### TAGs de valores semânticos
+### Exemplos de TAGs de valores semânticos
 * &lt;strong&gt; significa que o termo delimitado possui força dentro da frase. Logo, ele aparecerá em **negrito**.
-* &lt;em&gt; significa que queremos dar ênfase (vinda do inglês emphasis) ao termo. Logo, ele aparecerá em _itálico_.
+* &lt;em&gt; significa que queremos dar ênfase ao termo (vinda do inglês emphasis). Logo, ele aparecerá em _itálico_.
 * &lt;mark&gt; delimita um trecho como se estivéssemos usando uma caneta marca-texto.
 * &lt;small&gt; reduzirá o tamanho do texto, sendo útil para contratos e cláusulas.
 * &lt;del&gt; faz um ~traçado~ no meio da palavra, indicando que o texto deve ser desconsiderado pelo leitor.
@@ -43,26 +46,41 @@ A estrutura dentro das tags não pode conter espaços. Além disso, podemos ter 
 * &lt;sup&gt; é usado quando queremos escrever equações matemáticas, por exemplo x^2.
 * &lt;sup&gt; é usado quando queremos escrever equações químicias, por exemplo H2O.
 * &lt;code&gt; é usado para aplicar espaçamento uniforme a todas as letras, sendo ideal para exibir trechos de código.
-* &lt;pre&gt; é usado manter o texto pré-formatado, exatamente da mesma maneira na qual ele foi digitado, incluindo quebras de linhas, espaços e tabulações.
+* &lt;pre&gt; é usado para manter o texto pré-formatado, exatamente da mesma maneira na qual ele foi digitado, incluindo quebras de linhas, espaços e tabulações.
 * &lt;q&gt; é usado para citações curtas, vem do inglês quote. O texto dentro dessa tag irá receber automaticamente as aspas, mas não terá nenhum deslocamento. Essa técnica é mais usada quando queremos uma citação no meio de um parágrafo.
-* &lt;blockquote&gt; é usada para citações mais longas (em bloco) que ocupam um parágrafo próprio. O texto recebe automaticamente um recuo. Podemos adicionar o atributo cite="(citação aqui)" para melhorar o SEO da página e contribuir com a acessibilidade.
-* &lt;abbr&gt; é uma novidade do HTML5 e que ajuda muito em áreas como a de Tecnologia, que usa muitas siglas e abreviações. Sempre que você quiser escrever uma sigla, mas deixar claro ao usuário (e aos mecanismos de busca) o significado dela, use a tag &lt;abbr&gt;.
-* &lt;bdo&gt; significa bi-directional override e ela basicamente inverte o texto, para direita (ltr) e para esquerda (rtl).
+* &lt;blockquote&gt; é usada para citações mais longas (em bloco) que ocupam um parágrafo próprio. O texto recebe automaticamente um recuo. Podemos adicionar o atributo cite="" para melhorar o SEO da página e contribuir com a acessibilidade.
+* &lt;abbr&gt; é uma novidade da HTML5 e que ajuda muito em áreas como a de Tecnologia, que usa muitas siglas e abreviações. Sempre que você quiser escrever uma sigla, mas deixar claro ao usuário (e aos mecanismos de busca) o significado dela, use a tag &lt;abbr&gt;.
+* &lt;bdo&gt; vem de bi-directional override e ela basicamente inverte o texto, para direita (ltr) e para esquerda (rtl).
 
-Veja mais exemplos de tags na documentação da linguagem [aqui](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+Veja mais exemplos de tags e explicações detalhadas na documentação da linguagem clicando [aqui](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+## Imagem favicon
+O favicon é um pequeno ícone associado a um site, exibido na barra de endereços do navegador, nas abas e nos favoritos. Ele ajuda a identificar visualmente o site e a melhorar a experiência do usuário. O tipo de arquivo mais comum e recomendado para favicons é o .ico, pois ele é amplamente suportado por todos os navegadores e permite a inclusão de várias resoluções em um único arquivo, garantindo uma boa aparência em diferentes dispositivos e tamanhos de tela. Para adicionar um favicon a uma página HTML, usa-se a tag &lt;link&gt; dentro do elemento &lt;head&gt;:
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/54c27393-b93b-41af-9c1f-9d3b85785901)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/b6a01d7a-c221-477f-b2ab-3fdfddf32a3a)
+
+Existem alguns sites que você pode fazer ou baixar o seu próprio favicon:
+* [Icon Archive](https://www.iconarchive.com/)
+* [Favicon.cc - Crie o seu próprio favicon](https://www.favicon.cc/)
+* [Favicon.io - Gerador de favicon -> imagem, texto ou emoji](https://favicon.io/)
 
 ## Caracteres especiais e Emojis
-Em HTML, chamamos caracteres especiais e emojis de _HTML Entities_. Confira a tabela abaixo para ver alguns deles. Além disso, você pode encontrar uma lista de emojis no formato Unicode no site da
+Na HTML5, chamamos caracteres especiais e emojis de _HTML Entities_. Confira a tabela abaixo para ver alguns deles. Além disso, você pode encontrar uma lista de emojis no formato _unicode_ no site da
 [Emojipedia](www.emojipedia.org).
 
 ![Exemplo do PDF do Guanabara - PDF 5 da aula da HTML e CSS pg. 4](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a9341857-f487-4879-aa5d-b8bc8fb7ffbc)
 
-## Imagem, vídeo e aúdio.
-Em HTML, imagens, vídeos e áudios são elementos usados para exibir gráficos, fotografias, clipes de vídeo e conteúdos sonoros em uma página da web.
+>[!NOTE]
+> Unicode é um padrão de codificação de texto que permite a representação de praticamente todos os caracteres usados em sistemas de escrita ao redor do mundo. Ele foi criado para resolver os problemas de incompatibilidade entre diferentes sistemas de codificação de caracteres, que eram comuns antes de sua adoção.
+>
+>Unicode é essencial para a interoperabilidade em um mundo digital globalizado, permitindo que informações textuais sejam trocadas e processadas corretamente em qualquer língua e em qualquer plataforma.
+
+## Audiovisual
+Na HTML, imagens, vídeos e áudios são elementos usados para exibir gráficos, fotografias, clipes de vídeo e conteúdos sonoros em uma página da web.
 
 > [!CAUTION]
-> É importante estar atento(a) às imagens e conteúdos protegidos por direitos autorais, pois o uso não autorizado pode resultar em problemas legais, como processos judiciais. Recomendo assistir a um vídeo no YouTube que aborda essas questões de forma detalhada. 
-[Clique aqui](https://youtu.be/Bkym20GqOoQ) para acessar o vídeo.
+> É importante estar atento(a) aos conteúdos protegidos por direitos autorais, pois o uso não autorizado pode resultar em problemas legais, como processos judiciais. Saiba mais clicando [aqui](https://youtu.be/Bkym20GqOoQ).
 
 Existem diversos sites onde você pode encontrar imagens e vídeos para uso sem se preocupar com direitos autorais. Alguns exemplos incluem:
 * Foto:
@@ -80,93 +98,79 @@ Ao criar seu site, é importante considerar não apenas a experiência do usuár
 * JPEG (.jpg), ou Joint Photographic Experts Group, é um algoritmo de compressão usado para criar imagens fotográficas com um tamanho significativamente reduzido. É amplamente adotado por câmeras digitais modernas e softwares de edição de imagens. A principal vantagem
 desse formato é sua capacidade de gerar arquivos compactos, ocupando pouco espaço em disco. No entanto, é importante ter cuidado ao comprimir as imagens para evitar uma degradação excessiva na qualidade.
 * O formato PNG (.png), ou Portable Network Graphics, se diferencia do JPEG pela capacidade de configurar a opacidade de cada pixel, permitindo torná-lo transparente ou com transparência limitada. No entanto, em comparação com o JPEG, o PNG tende a ocupar mais espaço
-devido à sua capacidade de preservar com precisão as bordas dos pixels. Isso pode resultar em arquivos um pouco mais pesados, mas geralmente não de forma significativa.
+devido à sua capacidade de preservar com precisão as bordas dos pixels.
 
-> [!TIP]
-> Existem duas maneiras de comprimir imagens grandes em diversos formatos. Você pode baixar o software de código aberto [GIMP](https://www.gimp.org/downloads/), ou acessar sites como [Convert.io](https://convert.io/image-converter) ou [iLoveIMG](https://www.iloveimg.com/pt/comprimir-imagem) e fazer o upload da imagem. Esses sites fornecerão uma versão mais compacta para download.
+>[!TIP]
+> Existem duas maneiras de comprimir imagens grandes em diversos formatos. Você pode baixar o software de código aberto [GIMP](https://www.gimp.org/downloads/), ou acessar sites como [Convert.io](https://convert.io/image-converter) ou [iLoveIMG](https://www.iloveimg.com/pt/comprimir-imagem) e fazer o upload da imagem, esses sites fornecerão uma versão mais compacta (mais leve) para download.
+
+>[!TIP]
+> Se você quiser remover o fundo de uma imagem, pode fazê-lo usando o [GIMP](https://www.gimp.org/downloads/) ou uma inteligência artificial online gratuita chamada [removebg](https://www.remove.bg/pt-br).
 
 ### Imagens dinâmicas
 Quem acessa o site pelo celular, tablet, notebook/computador ou TV possui diferentes padrões de tela, e as imagens precisam se adaptar a esses formatos. Afinal, é muito desconfortável ver um site com margens laterais excessivas, especialmente em dispositivos móveis.
 
+Esses são os tamanhos padrão para cada dispositivo:
 * Celulares: 300x300
 * Tablets: 700x700
-* TV: 1000x1000
+* TVs: 1000x1000
 
-### Como inserir imagens estaticas e dinâmicas
+### Como inserir imagens estaticas e dinâmicas?
 Para inserir imagens estáticas em HTML, você pode usar a tag &lt;img&gt; e especificar o caminho da imagem no parâmetro src e alt para texto alternativo. Por exemplo:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/27511c4e-e592-4121-8088-273b72d3aa17)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/991ddc3f-722c-4d3d-a9ca-b512298ecdb4)
 
-Para inserir imagens dinâmicas, é necessário ter pelo menos três formatos separados (pequeno, médio e grande). Você deve utilizar a tag &lt;picture&gt; para isso. Dentro da tag &lt;picture&gt;, você deve incluir a tag &lt;source&gt;, onde pode definir o atributo media="max-width:nºdepx" e o atributo src para cada tamanho de imagem. Por exemplo:
+Para inserir imagens dinâmicas, é necessário ter pelo menos três formatos separados (pequeno, médio e grande). Você deve utilizar a tag &lt;picture&gt; para isso. Dentro da tag &lt;picture&gt;, você deve incluir a tag &lt;source&gt;, onde pode definir o parâmetro media="", src="" e type="" para cada tamanho de imagem. Por exemplo:
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a1dc4a72-0bf2-454e-b9c8-a5abc02bc349)
 
 > [!TIP]
 > É sempre recomendável adicionar pelo menos 50px adicionais para evitar problemas de redimensionamento.
 
-### Como inserir vídeos internos e externos
-Para inserir vídeos internos (no servidor) em HTML, você pode usar a tag &lt;video&gt;. Você pode definir o caminho do arquivo de vídeo no atributo src. Além disso, você pode adicionar atributos opcionais, como controls para exibir controles de reprodução padrão, autoplay para iniciar a reprodução automaticamente e loop para fazer o vídeo repetir continuamente.
+### Como inserir vídeos internos e externos?
+Para inserir vídeos internos (no servidor) na HTML, você pode usar a tag &lt;video&gt;. Você pode definir o caminho do arquivo de vídeo no parâmetro src. Além disso, você pode adicionar parâmetros opcionais, como controls para exibir controles de reprodução padrão, autoplay para iniciar a reprodução automaticamente e loop para fazer o vídeo repetir continuamente.
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/66b4aca8-1091-47c4-9c22-fbf76875c461)
 
 > [!WARNING]
 > A hierarquia é fundamental aqui. Se você define o arquivo .mp4 como a primeira opção, ele será o primeiro a ser carregado. Se não for possível, o navegador tentará a próxima opção. Se nenhum dos formatos for suportado, o texto alternativo definido será exibido.
 
-Inserir vídeos externos é bastante fácil. Basta acessar a opção de compartilhar e copiar o código de incorporação (embed) fornecido pelo serviço de hospedagem do vídeo, e em seguida, colar esse código dentro do elemento &lt;body&gt; do seu documento HTML. Isso é vantajoso, pois economiza espaço de armazenamento em sua hospedagem. No entanto, uma desvantagem é que o vídeo ou o serviço de hospedagem pode estar fora do ar, comprometendo a visualização do seu vídeo. Portanto, é importante analisar qual é a melhor opção para você ou seu cliente.
+Inserir vídeos externos é bastante fácil. Basta acessar a opção de compartilhar e copiar o código de incorporação (embed) fornecido pelo serviço de hospedagem do vídeo, e em seguida, colar esse código dentro da tag &lt;body&gt; do seu documento HTML. Isso é vantajoso, pois economiza espaço de armazenamento em sua hospedagem. No entanto, uma desvantagem é que o vídeo ou o serviço de hospedagem pode ficar fora do ar, comprometendo a visualização do seu conteúdo. Portanto, é importante analisar qual é a melhor opção para você ou seu cliente.
 
-### Formato de vídeo
-* .mp4 - Mais usado
-* .ogg
-* .mpeg
-* .m4v
-* .webm - Mais usado
-* .ogv - Mais usado
+### Exemplos de formato de vídeo
+1. mp4
+2. webm
+3. ogv
+4. ogg
+5. mpeg
+6. m4v
 
 > [!TIP]
 > Um excelente conversor de vídeo para gerar arquivos em diversos formatos e utilizando codecs padronizados é o programa de código aberto (gratuito), chamado [Handbrake](https://handbrake.fr/downloads.php).
 
-### Como inserir áudio interno e externo
-Os princípios que se aplicam a outras mídias também se aplicam ao áudio. Escolher um arquivo de áudio muito pesado pode afetar o carregamento do site. Podemos especificar o áudio utilizando o atributo src, seja ele hospedado localmente ou em outra hospedagem. A declaração de um elemento de áudio é simples.
+### Como inserir áudio interno e externo?
+Os princípios que se aplicam a outras mídias também se aplicam ao áudio. Escolher um arquivo de áudio muito pesado pode afetar o carregamento do site. Podemos especificar o áudio utilizando o parâmetro src="", seja ele hospedado localmente ou em outro servidor. A declaração de um elemento de áudio é simples.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4459881d-3715-431b-a5ed-153d2028698a)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/2b43baea-229e-433c-a1ca-251a4aa7098b)
 
 Agora para mais de uma opção de formato, utilizamos:
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d3bbdc3a-5a03-4911-9f12-8fc7fe2a8b39)
 
-### Formato de áudio
-* .mp3
-* .wav - Evite, pois é muito pesado!
-* .ogg
+### Exemplos de formato de áudio
+1. mp3
+2. ogg
+3. wav
 
-## Imagem favicon
-O favicon é um pequeno ícone associado a um site, exibido na barra de endereços do navegador, nas abas e nos favoritos. Ele ajuda a identificar visualmente o site e a melhorar a experiência do usuário. O tipo de arquivo mais comum e recomendado para favicons é o .ico, pois ele é amplamente suportado por todos os navegadores e permite a inclusão de várias resoluções em um único arquivo, garantindo uma boa aparência em diferentes dispositivos e tamanhos de tela. Para adicionar um favicon a uma página HTML, usa-se a tag &lt;link&gt; dentro do elemento &lt;head&gt;:
+## Listas e dicionários
+A HTML chama de ordered lists (&lt;ol&gt;) todas aquelas listas onde a ordem dos itens é algo muito importante e os itens são numerados automaticamente. Por exemplo um passo a passo para fazer um bolo ou uma lista de aprovados em um concurso.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/54c27393-b93b-41af-9c1f-9d3b85785901)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/b6a01d7a-c221-477f-b2ab-3fdfddf32a3a)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/2db1ee1f-c815-4f75-971f-b24a8704498d) (Como é escrito)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6e53f846-ede3-4d40-ba76-d3ff16e83fe8) (Efeito visual)
 
-Existem alguns sites que você pode fazer ou baixar o seu próprio favicon:
-* [Icon Archive](https://www.iconarchive.com/)
-* [Favicon.cc - Crie o seu próprio favicon](https://www.favicon.cc/)
-* [Favicon.io - Gerador de favicon -> imagem, texto ou emoji](https://favicon.io/)
+As unordered lists (&lt;ul&gt;), também chamadas de listas com marcadores, que são aquelas onde a ordem dos itens não influenciará no significado da lista e os itens são marcados com marcadores (pontos) por padrão.
 
-## Listas ordenadas, não ordenadas e dicionários em HTML
-A HTML chama de ordered lists todas aquelas listas onde a ordem dos itens é algo muito importante e os itens são numerados automaticamente. Por exemplo um passo a passo para fazer um bolo ou uma lista de aprovados em um concurso. As unordered lists, também chamadas de listas com marcadores, que são aquelas onde a ordem dos itens não influenciará no significado da lista e os itens são marcados com marcadores (pontos) por padrão. Independentemente do tipo de lista, ela deve estar no seguinte formato:
-
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/2db1ee1f-c815-4f75-971f-b24a8704498d)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6e53f846-ede3-4d40-ba76-d3ff16e83fe8)
-
-&lt;ol&gt; é para lista ordenada e &lt;ul&gt; é para lista não ordenada.
-
-Por fim, utilizamos dicionários para definir termos e suas descrições:
-* &lt;dl&gt; (Definition List) envolve toda a lista de definições.
-* &lt;dt&gt; (Definition Term) representa um termo a ser definido.
-* &lt;dd&gt; (Definition Description) contém a definição ou descrição do termo.
-
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/1355342c-6747-48eb-a278-d16ce5adcb12)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d168706d-ce62-4f42-9cbb-6776e3877ccf)
-
-
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/17b9c1c6-3f30-420b-9ec8-3d035a1bc892)(Como é escrito)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/0f1f3360-7009-48f5-8fad-8e806dec6dfe)(Efeito visual)
 
 ### Parâmetro type e start
 Dentro das lista podemos adicionar o parâmetro type. 
@@ -186,12 +190,21 @@ Já as listas não ordenadas possuem apenas três que são:
 
 O parâmetro start é utilizado para definir o início da contagem, ele apenas pode receber um valor númerico mesmo se tratando de uma letra do alfabeto.
 
+#### Dicionários
+Por fim, utilizamos dicionários para definir termos e suas descrições:
+* &lt;dl&gt; (Definition List) envolve toda a lista de definições.
+* &lt;dt&gt; (Definition Term) representa um termo a ser definido.
+* &lt;dd&gt; (Definition Description) contém a definição ou descrição do termo.
+
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/1355342c-6747-48eb-a278-d16ce5adcb12) (Como é escrito)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d168706d-ce62-4f42-9cbb-6776e3877ccf) (Efeito visual)
+
 ## Links (endereços virtuais)
-Os hyperlinks são um dos conceitos mais antigos da história da linguagem HTML. Eles permitem que você ligue um ponto a outro na World Wide Web. Toda vez que você está acessando um site e clica em um local para ir para outra página, outro site ou até para baixar um arquivo, você está interagindo com um hyperlink. Para criar um hyperlink, devemos criar âncoras através da tag &lt;a&gt;. O principal atributo dessa tag é o href, que cria uma referência hipertexto.
+Os hyperlinks são um dos conceitos mais antigos da história da linguagem HTML. Eles permitem que você ligue um ponto a outro na World Wide Web. Toda vez que você está acessando um site e clica em um local para ir para outra página, outro site ou até para baixar um arquivo, você está interagindo com um hyperlink. Para criar um hyperlink, devemos criar âncoras através da tag &lt;a&gt;. O principal parâmetro dessa tag é o href, que cria uma referência hipertexto.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/573c002c-5e50-46bc-8b15-37abec63fb92)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4125a51b-ab75-4428-8a3f-0f751f9b6264)
 
-Além desse atributo de href, temos outros como:
+Além desse parâmetro de href, temos outros como:
 * hreflang - Define o idioma do que está por trás do link, é uma boa prática de SEO.
 * target - Define onde o site de destino vai abrir
   - _blank vai abrir o link em uma nova janela em branco
@@ -205,9 +218,9 @@ Além desse atributo de href, temos outros como:
   - author indica que é um link para o site do autor do artigo atual
   - external indica que é um link para outro site que não faz parte do site atual
   - nofollow indica que é um link para um site não endossado, como um link pago.
- 
- ### Navegando por pastas
-Caso você tenha tentado abrir um arquivo com o atributo href e ele não apareceu, pode ser que ele não esteja na mesma página de origem. Nesse caso, você precisa retroceder uma página ou até mais de uma. Se você estiver se referindo à pasta atual do servidor, pode usar "./" antes do nome do arquivo. Para se referir à pasta imediatamente superior na hierarquia, utilize "../" para voltar um nível para a pasta mais externa. Essas são práticas comuns de navegação no sistema operacional Linux, então talvez seja útil aprender mais sobre elas.
+
+>[!TIP]
+> Se você quiser aprender mais sobre links, leia a documentação da linguagem disponível [aqui](https://developer.mozilla.org/pt-BR/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 
 ### Downloads
 Você também pode criar links para downloads usando âncoras. Veja um exemplo abaixo:
@@ -239,3 +252,8 @@ A hierarquia de uma tabela simples segue a ordem da lista abaixo:
 
 >[!Note]
 > Nossa tabela não possui cores nem divisões, que seriam ideais para uma tabela bem formatada. No [repositório sobre CSS](https://github.com/ReisLeonardo/html-css-js/blob/main/css.md), ensino como deixá-las mais atraentes.
+
+## iframe
+Lorem Ipsum
+
+## Formulários
