@@ -349,3 +349,6 @@ A propriedade overflow é usada para controlar o comportamento de rolagem do con
 * overflow-x: Controla a rolagem horizontal. Para tabelas, overflow-x é frequentemente usado para permitir a rolagem horizontal.
 * overflow-y: Controla a rolagem vertical.
 * overflow: Controla a rolagem em ambas as direções.
+
+## Media queries
+Lorem Ipsum
