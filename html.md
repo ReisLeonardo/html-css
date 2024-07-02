@@ -253,7 +253,8 @@ A hierarquia de uma tabela simples segue a ordem da lista abaixo:
 >[!Note]
 > Nossa tabela não possui cores nem divisões, que seriam ideais para uma tabela bem formatada. No [repositório sobre CSS](https://github.com/ReisLeonardo/html-css-js/blob/main/css.md), ensino como deixá-las mais atraentes.
 
-## iframe
+## Inline frames
 Lorem Ipsum
 
 ## Formulários
+Lorem Ipsum
