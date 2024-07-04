@@ -350,5 +350,8 @@ A propriedade overflow é usada para controlar o comportamento de rolagem do con
 * overflow-y: Controla a rolagem vertical.
 * overflow: Controla a rolagem em ambas as direções.
 
-## Media queries
+# Media queries
+Lorem Ipsum
+
+# Flexbox
 Lorem Ipsum
