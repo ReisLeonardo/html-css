@@ -286,4 +286,47 @@ Para melhorar a segurança do <iframe>, podem ser usados os atributos sandbox e 
 Aprenda mais sobre os iframe [aqui](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe).
 
 ## Formulários
-Lorem Ipsum
+Os formulários em HTML são componentes essenciais para a coleta de dados dos usuários. Eles são usados em conjunto com linguagens de interação, como PHP ou JavaScript, para processar e validar as informações enviadas.
+
+>[!NOTE]
+> O protocolo HTTPS criptografa os dados, sendo extremamente útil para garantir a segurança e a privacidade em formulários online.
+
+### Estrutura básica do formulário
+Os elementos de formulário são sempre colocados dentro da tag &lt;form&gt;, que define a área do formulário e especifica como os dados devem ser enviados. Um dos principais elementos dentro de um formulário é a tag &lt;input&gt;, que permite a inserção de dados pelo usuário.
+
+>[!TIP]
+> Para melhorar o SEO, é recomendado envolver o texto dentro da tag <label> e associá-la ao campo usando o atributo for com o valor correspondente ao id do elemento <input>.
+
+### Métodos de envio: GET e POST
+O método de envio dos dados pode ser especificado pelo atributo method na tag &lt;form&gt;. Os dois métodos mais comuns são GET e POST.
+* GET: Utilizado para enviar dados não sensíveis. Os dados são anexados à URL na forma de uma string de consulta, o que tem um limite de aproximadamente 3.000 bytes. Este método não deve ser usado para enviar arquivos ou dados sensíveis.
+* POST: Ideal para o envio de dados sensíveis e permite o envio de grandes quantidades de dados, incluindo arquivos. Os dados são enviados no corpo da requisição HTTP.
+
+>[!TIP]
+> O name="" é útil para HTML e Php, já o id="" é melhor para JavaScript e label.
+
+### Elementos do formulário
+* &lt;input&gt;: Usado para criar diversos tipos de campos de entrada, como texto, senhas, e-mails, entre outros.
+  * required: Torna o preenchimento do campo obrigatório.
+  * size: Define o tamanho do campo de entrada.
+  * placeholder: Exibe uma dica dentro do campo de entrada.
+  * autocomplete: Habilita ou desabilita a função de preenchimento automático.
+  * value: Define um valor padrão para o campo de entrada.
+* &lt;datalist&gt;: Fornece uma lista de opções predefinidas para um campo de entrada.
+* &lt;textarea&gt;: Utilizado para a inserção de textos longos.
+* &lt;output&gt;: Exibe o resultado de um cálculo ou de uma ação.
+
+>[!TIP]
+> O autocomplete="off" desliga o preenchimento automático dos dados salvos no navegador.
+
+### Agrupamento de campos
+* &lt;fieldset&gt;: Agrupa elementos relacionados dentro de um formulário, criando um contorno ao redor deles.
+* &lt;legend&gt;: Fornece um título para o grupo de elementos dentro do &lt;fieldset&gt;.
+
+### Listas de Seleção
+* &lt;select&gt;: Cria uma lista suspensa com opções.
+* &lt;option&gt;: Define uma opção dentro do &lt;select&gt;.
+* &lt;optgroup&gt;: Agrupa opções dentro de um &lt;select&gt;, permitindo a categorização das opções.
+
+>[!WARNING]
+> Preste atenção à compatibilidade dos recursos apresentados, pois nem todos os navegadores e dispositivos suportam esses recursos, o que pode causar incompatibilidade.
