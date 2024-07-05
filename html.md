@@ -254,7 +254,36 @@ A hierarquia de uma tabela simples segue a ordem da lista abaixo:
 > Nossa tabela não possui cores nem divisões, que seriam ideais para uma tabela bem formatada. No [repositório sobre CSS](https://github.com/ReisLeonardo/html-css-js/blob/main/css.md), ensino como deixá-las mais atraentes.
 
 ## Inline frames
-Lorem Ipsum
+O &lt;iframe&gt; é uma tag HTML usada para incorporar um documento HTML dentro de outro. É bastante utilizada para integrar conteúdos de outras páginas, como vídeos, mapas ou widgets, em uma página web.
+
+### Diferenças entre &lt;iframe&gt; e &lt;frame&gt;:
+Anteriormente, a tag &lt;frame&gt; era usada em conjunto com a tag &lt;frameset&gt; para dividir a janela do navegador em várias seções, cada uma carregando um documento HTML separado. No entanto, o uso de &lt;frame&gt; e &lt;frameset&gt; foi descontinuado no HTML5 devido a problemas de usabilidade e acessibilidade.
+
+Em contraste, o <iframe> é uma tag inline que permite incorporar um documento dentro de outro, sem dividir a janela do navegador.
+
+### Restrições de acesso via &lt;iframe&gt;:
+Existem sites que impedem o acesso ao seu conteúdo através de &lt;iframe&gt;. Isso é feito por razões de segurança e privacidade. Nesses casos, é recomendável utilizar a tag &lt;a&gt;, que cria um link para o usuário acessar diretamente a página desejada.
+
+### Tamanho padrão do &lt;iframe&gt;:
+O tamanho padrão de um <iframe> é de 300 pixels de largura por 150 pixels de altura. Isso pode ser ajustado utilizando os atributos width e height.
+
+>[!NOTE]
+> frameborder: Define a presença de uma borda ao redor do <iframe>. O valor pode ser "0" (sem borda) ou "1" (com borda). Este atributo está obsoleto no HTML5, sendo recomendado o uso de CSS para estilização de bordas.
+
+>[!NOTE]
+> scrolling: Controla a presença de barras de rolagem no <iframe>. Os valores possíveis são "yes" (barras de rolagem sempre presentes), "no" (barras de rolagem nunca presentes) e "auto" (barras de rolagem aparecem conforme necessário). Este atributo também está obsoleto no HTML5, sendo recomendado o uso de CSS para controle de rolagem.
+
+### Problemas do uso de &lt;iframe&gt;:
+* SEO (Search Engine Optimization): Conteúdos carregados dentro de um &lt;iframe&gt; podem não ser indexados corretamente pelos bots de busca, como o Googlebot, o que pode afetar negativamente o SEO do site.
+* Acessibilidade: Leitores de tela geralmente têm dificuldade em ler o conteúdo dentro de um &lt;iframe&gt;, o que pode prejudicar a experiência de usuários com deficiências visuais.
+* Segurança: Incorporar conteúdo de terceiros pode expor o site a riscos de segurança, como ataques de cross-site scripting (XSS) e cross-site request forgery (CSRF). Scripts maliciosos podem ser executados dentro do &lt;iframe&gt;, comprometendo a segurança do usuário.
+
+### Tornando o &lt;iframe&gt; mais seguro:
+Para melhorar a segurança do <iframe>, podem ser usados os atributos sandbox e referrerpolicy:
+* sandbox="sandbox": Restringe a execução de scripts e a navegação dentro do <iframe>, além de desabilitar outros comportamentos potencialmente perigosos.
+* referrerpolicy="no-referrer": Garante que nenhuma informação de referência seja enviada quando o usuário clicar em links dentro do <iframe>.
+
+Aprenda mais sobre os iframe [aqui](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/iframe).
 
 ## Formulários
 Lorem Ipsum
