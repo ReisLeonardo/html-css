@@ -351,7 +351,63 @@ A propriedade overflow é usada para controlar o comportamento de rolagem do con
 * overflow: Controla a rolagem em ambas as direções.
 
 # Media queries
-Lorem Ipsum
+Media queries são uma funcionalidade do CSS3 que permitem aplicar estilos diferentes a um documento HTML com base em características específicas do dispositivo, como largura, altura, orientação da tela, e tipo de mídia (por exemplo, tela ou impressora). Isso possibilita a criação de designs responsivos, que se adaptam a diferentes tamanhos e tipos de dispositivos.
 
-# Flexbox
-Lorem Ipsum
+As media queries são definidas usando a regra @media no CSS.
+
+![image](https://github.com/ReisLeonardo/html-css/assets/89877899/af01a183-3b8c-41ef-b65e-a556e5106532)
+
+## Versão para impressora
+Para aplicar estilos específicos ao imprimir um documento, você pode usar a media query print. Isso garante que o conteúdo seja exibido corretamente ao ser impresso.
+
+>[!NOTE]
+> Em @media print {} o background-image não funciona.
+
+## Conceito de Mobile First
+O conceito de "Mobile First" é uma abordagem de design que prioriza a experiência em dispositivos móveis antes de se concentrar em telas maiores, como tablets e desktops. A ideia é começar a escrever o CSS para os menores dispositivos e, em seguida, adicionar media queries para ajustar o layout e a funcionalidade para dispositivos maiores.
+
+## Breakpoints típicos para dispositivos (Typical devices breakpoints)
+Breakpoints são pontos definidos em uma folha de estilo CSS que especificam onde o layout de uma página deve mudar em resposta ao tamanho da tela ou a outras características do dispositivo. Eles são essenciais para criar designs responsivos, que se adaptam perfeitamente a diferentes dispositivos e tamanhos de tela.
+
+>[!NOTE]
+> * Telas pequenas até 600px
+> * Celulares de 600px até 768px
+> * Tablets de 768px até 992px
+> * Desktops de 992px até 1200px
+> * Telas grandes acima de 1200px
+
+Aprenda mais sobre media query na documentação da linguagem disponível [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_media_queries/Using_media_queries).
+
+# Flexbox (CSS Flexible Box Module Level 1)
+Flexbox é um layout de CSS3 projetado para fornecer uma maneira mais eficiente de distribuir espaço e alinhar itens dentro de um container, especialmente quando o tamanho dos itens é desconhecido ou dinâmico. O módulo Flexbox oferece um conjunto de propriedades que permitem criar layouts flexíveis e responsivos sem a necessidade de flutuações e posicionamento complexo.
+
+**Benefícios do Flexbox**
+1. **Layout Direcional:** Flexbox permite que os elementos sejam alinhados em várias direções - horizontalmente ou verticalmente.
+2. **Espaçamento Consistente:** Ele distribui o espaço de forma igual ou proporcional entre os elementos, garantindo um espaçamento consistente.
+3. **Alinhamento Centralizado:** Facilita o alinhamento centralizado de itens tanto no eixo principal quanto no eixo cruzado.
+4. **Reordenamento dos Itens:** Permite reordenar visualmente os itens sem alterar a ordem do código HTML.
+5. **Adaptabilidade:** Flexbox é ideal para layouts dinâmicos onde o tamanho dos itens pode variar.
+
+**Comparando com media queries**
+* **Media Queries:** Usadas para aplicar diferentes estilos baseados nas características do dispositivo, como largura da tela. Elas são essenciais para criar layouts responsivos que se adaptam a diferentes dispositivos.
+* **Flexbox:** Proporciona um layout flexível dentro de um container, ajudando a distribuir e alinhar itens de forma eficiente. Flexbox complementa media queries ao fornecer ferramentas para organizar e alinhar elementos dentro dos diferentes layouts definidos pelas media queries.
+
+## Contêiner Flexível (Flex Container)
+Para começar a usar Flexbox, é necessário definir um contêiner flexível usando a propriedade display: flex;
+
+**Eixos no Flexbox**
+* **Eixo Principal (Main Axis):** É o eixo ao longo do qual os itens flexíveis são colocados. Pode ser horizontal ou vertical, dependendo da propriedade flex-direction.
+* **Eixo Cruzado (Cross Axis):** É perpendicular ao eixo principal. Se o eixo principal for horizontal, o eixo cruzado será vertical, e vice-versa.
+
+![image](https://github.com/ReisLeonardo/html-css/assets/89877899/3b92e909-8065-4dcf-8428-de91419c15da)
+
+**Direções no Flexbox**
+* **flex-direction:** Define a direção do eixo principal.
+
+![image](https://github.com/ReisLeonardo/html-css/assets/89877899/a1740b52-e73d-422c-a834-348ed2dbaaa3)
+
+**Propriedades do Flex Container**
+* **justify-content:** Alinha os itens ao longo do eixo principal (main-axis).
+* **align-items:** Alinha os itens ao longo do eixo cruzado.
+
+Aprenda mais sobre flexbox na documentação da linguagem disponível [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
