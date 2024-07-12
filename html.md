@@ -2,7 +2,22 @@
 É organizada em uma série de elementos e tags que definem o conteúdo e a estrutura de uma página web. Os arquivos dessa linguagem possuem a extensão (.html). 
 O exemplo abaixo ilustra a estrutura essencial de um documento HTML, incluindo a declaração do tipo de documento, o cabeçalho com metadados e o corpo com o conteúdo visível:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/fd15612a-77fb-4b33-9c40-884dda7a579d) (Como é o código escrito)
+``` html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+</head>
+<body>
+    <h1>Bem-vindo ao HTML</h1>
+    <p>Este é um parágrafo de exemplo.</p>
+    <a href="#">Visite nosso site</a>
+    <img src="imagem.jpg" alt="Descrição da imagem">
+</body>
+</html>
+```
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6833ed84-bf4a-49c7-9f99-9aad7343ccf3) (Como é o efeito visual)
 
