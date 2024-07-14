@@ -2,6 +2,8 @@
 É organizada em uma série de elementos e tags que definem o conteúdo e a estrutura de uma página web. Os arquivos dessa linguagem possuem a extensão (.html). 
 O exemplo abaixo ilustra a estrutura essencial de um documento HTML, incluindo a declaração do tipo de documento, o cabeçalho com metadados e o corpo com o conteúdo visível:
 
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6833ed84-bf4a-49c7-9f99-9aad7343ccf3)
+
 ``` html
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,20 +21,18 @@ O exemplo abaixo ilustra a estrutura essencial de um documento HTML, incluindo a
 </html>
 ```
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6833ed84-bf4a-49c7-9f99-9aad7343ccf3) (Como é o efeito visual)
-
 * Declaração do Tipo de Documento: &lt;!DOCTYPE html&gt; indica ao navegador que o documento é um arquivo HTML5.
 * Elemento: &lt;html&gt; indica o elemento raiz que envolve todo o conteúdo da página.
 * Cabeçalho: &lt;head&gt; contém metadados sobre o documento, como o título, links para arquivos de estilo (CSS), scripts (JavaScript), e outras informações.
 * Corpo: &lt;body&gt; contém todo o conteúdo visível da página, como texto, imagens, links, tabelas, listas, etc.
 
-Exemplos de tags dentro do &lt;head&gt;:
+### Exemplos de tags dentro do &lt;head&gt;
  - &lt;title&gt;: Define o título da página que aparece na aba do navegador.
  - &lt;meta&gt;: Fornece metadados como charset, descrição, palavras-chave, autor, etc.
  - &lt;link&gt;: Conecta a página a arquivos externos, como folhas de estilo CSS.
  - &lt;style&gt;: Contém regras de estilo CSS que se aplicam ao documento.
 
-Exemplos de tags dentro do &lt;body&gt;:
+### Exemplos de tags dentro do &lt;body&gt;
 - &lt;h1&gt; a &lt;h6&gt;: Tags de cabeçalho, variando de h1 (mais importante) a h6 (menos importante).
 - &lt;p&gt;: Define um parágrafo.
 - &lt;a&gt;: Define um link.
@@ -48,6 +48,15 @@ Exemplos de tags dentro do &lt;body&gt;:
 ## As TAGs
 HTML funciona com base em tags, sendo que a grande maioria delas possui abertura e fechamento com colchetes angulares, os famosos < (less than) e > (greater than). 
 A estrutura dentro das tags não pode conter espaços. Além disso, podemos ter elementos com atributos, valores e conteúdo:
+
+``` html
+<!DOCTYPE html>
+...
+<body>
+    <a href="#">Visite nosso site</a>
+</body>
+</html>
+```
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4125a51b-ab75-4428-8a3f-0f751f9b6264)
 
@@ -70,10 +79,24 @@ A estrutura dentro das tags não pode conter espaços. Além disso, podemos ter 
 Veja mais exemplos de tags e explicações detalhadas na documentação da linguagem clicando [aqui](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
 ## Imagem favicon
-O favicon é um pequeno ícone associado a um site, exibido na barra de endereços do navegador, nas abas e nos favoritos. Ele ajuda a identificar visualmente o site e a melhorar a experiência do usuário. O tipo de arquivo mais comum e recomendado para favicons é o .ico, pois ele é amplamente suportado por todos os navegadores e permite a inclusão de várias resoluções em um único arquivo, garantindo uma boa aparência em diferentes dispositivos e tamanhos de tela. Para adicionar um favicon a uma página HTML, usa-se a tag &lt;link&gt; dentro do elemento &lt;head&gt;:
+O favicon é um pequeno ícone associado a um site, exibido na barra de endereços do navegador, nas abas e nos favoritos. Ele ajuda a identificar visualmente o site e a melhorar a experiência do usuário.
+
+``` html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+</head>
+...
+</html>
+```
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/54c27393-b93b-41af-9c1f-9d3b85785901)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/b6a01d7a-c221-477f-b2ab-3fdfddf32a3a)
+
+O tipo de arquivo mais comum e recomendado para favicons é o .ico, pois ele é amplamente suportado por todos os navegadores e permite a inclusão de várias resoluções em um único arquivo, garantindo uma boa aparência em diferentes dispositivos e tamanhos de tela.
 
 Existem alguns sites que você pode fazer ou baixar o seu próprio favicon:
 * [Icon Archive](https://www.iconarchive.com/)
@@ -92,7 +115,7 @@ Na HTML5, chamamos caracteres especiais e emojis de _HTML Entities_. Confira a t
 >Unicode é essencial para a interoperabilidade em um mundo digital globalizado, permitindo que informações textuais sejam trocadas e processadas corretamente em qualquer língua e em qualquer plataforma.
 
 ## Audiovisual
-Na HTML, imagens, vídeos e áudios são elementos usados para exibir gráficos, fotografias, clipes de vídeo e conteúdos sonoros em uma página da web.
+Na HTML5, imagens, vídeos e áudios são elementos usados para exibir gráficos, fotografias, clipes de vídeo e conteúdos sonoros em uma página da web.
 
 > [!CAUTION]
 > É importante estar atento(a) aos conteúdos protegidos por direitos autorais, pois o uso não autorizado pode resultar em problemas legais, como processos judiciais. Saiba mais clicando [aqui](https://youtu.be/Bkym20GqOoQ).
@@ -136,7 +159,15 @@ Para inserir imagens estáticas em HTML, você pode usar a tag &lt;img&gt; e esp
 
 Para inserir imagens dinâmicas, é necessário ter pelo menos três formatos separados (pequeno, médio e grande). Você deve utilizar a tag &lt;picture&gt; para isso. Dentro da tag &lt;picture&gt;, você deve incluir a tag &lt;source&gt;, onde pode definir o parâmetro media="", src="" e type="" para cada tamanho de imagem. Por exemplo:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a1dc4a72-0bf2-454e-b9c8-a5abc02bc349)
+``` html
+<body>
+    <picture>
+        <source media="(max-width: 350px)" srcset="imagem_pequena.jpg" type="image/jpeg">
+        <source media="(max-width: 750px)" srcset="imagem_media.jpg" type="image/jpeg">
+        <img src="imagem_grande.jpg" alt="Descrição da imagem">
+    </picture>
+</body>
+```
 
 > [!TIP]
 > É sempre recomendável adicionar pelo menos 50px adicionais para evitar problemas de redimensionamento.
@@ -144,7 +175,15 @@ Para inserir imagens dinâmicas, é necessário ter pelo menos três formatos se
 ### Como inserir vídeos internos e externos?
 Para inserir vídeos internos (no servidor) na HTML, você pode usar a tag &lt;video&gt;. Você pode definir o caminho do arquivo de vídeo no parâmetro src. Além disso, você pode adicionar parâmetros opcionais, como controls para exibir controles de reprodução padrão, autoplay para iniciar a reprodução automaticamente e loop para fazer o vídeo repetir continuamente.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/66b4aca8-1091-47c4-9c22-fbf76875c461)
+``` html
+<body>
+    <video controls autoplay loop width="600" poster="miniatura.jpg">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        <p>Seu navegador não suporta o elemento de vídeo.</p>
+    </video>
+</body>
+```
 
 > [!WARNING]
 > A hierarquia é fundamental aqui. Se você define o arquivo .mp4 como a primeira opção, ele será o primeiro a ser carregado. Se não for possível, o navegador tentará a próxima opção. Se nenhum dos formatos for suportado, o texto alternativo definido será exibido.
@@ -169,7 +208,15 @@ Os princípios que se aplicam a outras mídias também se aplicam ao áudio. Esc
 
 Agora para mais de uma opção de formato, utilizamos:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d3bbdc3a-5a03-4911-9f12-8fc7fe2a8b39)
+``` html
+<body>
+    <audio preload="metadata" controls autoplay>
+        <source src="arquivo.mp3" type="audio/mpeg">
+        <source src="arquivo.ogg" type="audio/ogg">
+        <p>Seu navegador não suporta o elemento de áudio.</p>
+    </audio>
+</body>
+```
 
 ### Exemplos de formato de áudio
 1. mp3
@@ -179,13 +226,29 @@ Agora para mais de uma opção de formato, utilizamos:
 ## Listas e dicionários
 A HTML chama de ordered lists (&lt;ol&gt;) todas aquelas listas onde a ordem dos itens é algo muito importante e os itens são numerados automaticamente. Por exemplo um passo a passo para fazer um bolo ou uma lista de aprovados em um concurso.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/2db1ee1f-c815-4f75-971f-b24a8704498d) (Como é escrito)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6e53f846-ede3-4d40-ba76-d3ff16e83fe8) (Efeito visual)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6e53f846-ede3-4d40-ba76-d3ff16e83fe8)
+
+``` html
+<body>
+    <ol>
+        <li>Primeiro</li>
+        <li>Segundo</li>
+    </ol>
+</body>
+```
 
 As unordered lists (&lt;ul&gt;), também chamadas de listas com marcadores, que são aquelas onde a ordem dos itens não influenciará no significado da lista e os itens são marcados com marcadores (pontos) por padrão.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/17b9c1c6-3f30-420b-9ec8-3d035a1bc892)(Como é escrito)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/0f1f3360-7009-48f5-8fad-8e806dec6dfe)(Efeito visual)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/0f1f3360-7009-48f5-8fad-8e806dec6dfe)
+
+``` html
+<body>
+    <ul>
+        <li>Bolo</li>
+        <li>Pizza</li>
+    </ul>
+</body>
+```
 
 ### Parâmetro type e start
 Dentro das lista podemos adicionar o parâmetro type. 
@@ -201,7 +264,14 @@ Já as listas não ordenadas possuem apenas três que são:
 * circle - Uma bola com uma borda preta e sem preenchimento
 * square - Um pequeno quadrado preto totalmente pintado
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/c25ad72f-0d3d-4c5c-bae9-67bda970b5e7)
+``` html
+<body>
+    <ol type="1">
+        <li>Primeiro</li>
+        <li>Segundo</li>
+    </ol>
+</body>
+```
 
 O parâmetro start é utilizado para definir o início da contagem, ele apenas pode receber um valor númerico mesmo se tratando de uma letra do alfabeto.
 
@@ -211,8 +281,16 @@ Por fim, utilizamos dicionários para definir termos e suas descrições:
 * &lt;dt&gt; (Definition Term) representa um termo a ser definido.
 * &lt;dd&gt; (Definition Description) contém a definição ou descrição do termo.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/1355342c-6747-48eb-a278-d16ce5adcb12) (Como é escrito)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d168706d-ce62-4f42-9cbb-6776e3877ccf) (Efeito visual)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d168706d-ce62-4f42-9cbb-6776e3877ccf)
+
+``` html
+<body>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação utilizado para criar o conteúdo de sites.</dd>
+    </dl>
+</body>
+```
 
 ## Links (endereços virtuais)
 Os hyperlinks são um dos conceitos mais antigos da história da linguagem HTML. Eles permitem que você ligue um ponto a outro na World Wide Web. Toda vez que você está acessando um site e clica em um local para ir para outra página, outro site ou até para baixar um arquivo, você está interagindo com um hyperlink. Para criar um hyperlink, devemos criar âncoras através da tag &lt;a&gt;. O principal parâmetro dessa tag é o href, que cria uma referência hipertexto.
@@ -240,7 +318,13 @@ Além desse parâmetro de href, temos outros como:
 ### Downloads
 Você também pode criar links para downloads usando âncoras. Veja um exemplo abaixo:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/aa8ce8de-a9c6-4d3d-88e1-0bdfcf462575)
+``` html
+<body>
+    <a href=livro.pdf" download="livro.pdf" type="application/pdf">
+        Baixe aqui o PDF do meu livro
+    </a>
+</body>
+```
 
 >[!TIP]
 > Se você quiser saber o que escrever dentro do atributo type de uma âncora de hypertext, você pode consultar a lista oficial da IANA.org disponível [aqui](https://www.iana.org/assignments/media-types/media-types.xhtml).
@@ -261,7 +345,31 @@ A hierarquia de uma tabela simples segue a ordem da lista abaixo:
 7. &lt;th&gt; (table header): Define uma célula de cabeçalho, geralmente usada para títulos de colunas ou linhas.
 8. &lt;td&gt; (table data): Define uma célula de dados.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/ff4c9e90-54f3-44db-954e-e51f75cc0272)
+
+``` html
+<body>
+    <table>
+        <caption>Uma tabela</caption>
+        <thead>
+            <tr>
+                <td>A</td>
+                <td>B</td>
+                <td>C</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Letra A</td>
+                <td>Letra B</td>
+                <td>Letra C</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr><td>Letras do alfabeto</td></tr>
+        </tfoot>
+    </table>
+</body>
+```
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6112448c-0f46-421a-8b09-1ea28e630cb5)
 
@@ -271,15 +379,15 @@ A hierarquia de uma tabela simples segue a ordem da lista abaixo:
 ## Inline frames
 O &lt;iframe&gt; é uma tag HTML usada para incorporar um documento HTML dentro de outro. É bastante utilizada para integrar conteúdos de outras páginas, como vídeos, mapas ou widgets, em uma página web.
 
-### Diferenças entre &lt;iframe&gt; e &lt;frame&gt;:
+### Diferenças entre &lt;iframe&gt; e &lt;frame&gt;
 Anteriormente, a tag &lt;frame&gt; era usada em conjunto com a tag &lt;frameset&gt; para dividir a janela do navegador em várias seções, cada uma carregando um documento HTML separado. No entanto, o uso de &lt;frame&gt; e &lt;frameset&gt; foi descontinuado no HTML5 devido a problemas de usabilidade e acessibilidade.
 
 Em contraste, o <iframe> é uma tag inline que permite incorporar um documento dentro de outro, sem dividir a janela do navegador.
 
-### Restrições de acesso via &lt;iframe&gt;:
+### Restrições de acesso via &lt;iframe&gt;
 Existem sites que impedem o acesso ao seu conteúdo através de &lt;iframe&gt;. Isso é feito por razões de segurança e privacidade. Nesses casos, é recomendável utilizar a tag &lt;a&gt;, que cria um link para o usuário acessar diretamente a página desejada.
 
-### Tamanho padrão do &lt;iframe&gt;:
+### Tamanho padrão do &lt;iframe&gt;
 O tamanho padrão de um <iframe> é de 300 pixels de largura por 150 pixels de altura. Isso pode ser ajustado utilizando os atributos width e height.
 
 >[!NOTE]
@@ -288,12 +396,12 @@ O tamanho padrão de um <iframe> é de 300 pixels de largura por 150 pixels de a
 >[!NOTE]
 > scrolling: Controla a presença de barras de rolagem no <iframe>. Os valores possíveis são "yes" (barras de rolagem sempre presentes), "no" (barras de rolagem nunca presentes) e "auto" (barras de rolagem aparecem conforme necessário). Este atributo também está obsoleto no HTML5, sendo recomendado o uso de CSS para controle de rolagem.
 
-### Problemas do uso de &lt;iframe&gt;:
+### Problemas do uso de &lt;iframe&gt;
 * SEO (Search Engine Optimization): Conteúdos carregados dentro de um &lt;iframe&gt; podem não ser indexados corretamente pelos bots de busca, como o Googlebot, o que pode afetar negativamente o SEO do site.
 * Acessibilidade: Leitores de tela geralmente têm dificuldade em ler o conteúdo dentro de um &lt;iframe&gt;, o que pode prejudicar a experiência de usuários com deficiências visuais.
 * Segurança: Incorporar conteúdo de terceiros pode expor o site a riscos de segurança, como ataques de cross-site scripting (XSS) e cross-site request forgery (CSRF). Scripts maliciosos podem ser executados dentro do &lt;iframe&gt;, comprometendo a segurança do usuário.
 
-### Tornando o &lt;iframe&gt; mais seguro:
+### Tornando o &lt;iframe&gt; mais seguro
 Para melhorar a segurança do <iframe>, podem ser usados os atributos sandbox e referrerpolicy:
 * sandbox="sandbox": Restringe a execução de scripts e a navegação dentro do <iframe>, além de desabilitar outros comportamentos potencialmente perigosos.
 * referrerpolicy="no-referrer": Garante que nenhuma informação de referência seja enviada quando o usuário clicar em links dentro do <iframe>.
