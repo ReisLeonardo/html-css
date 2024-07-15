@@ -1,9 +1,29 @@
 # Estrutura das CSS
 CSS, ou Cascading Style Sheets (Folhas de Estilo em Cascata, em tradução livre), é uma linguagem usada para descrever a apresentação de um documento escrito em HTML ou XML. Com CSS, você pode controlar a aparência visual dos elementos em uma página web, incluindo layout, cores, fontes e espaçamento. CSS permite separar o conteúdo da apresentação, facilitando a manutenção e atualização do design de um site. As regras CSS podem ser aplicadas diretamente no HTML, em um arquivo CSS externo, ou dentro de tags &lt;style&gt; no cabeçalho do documento HTML.
 
+``` html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+</head>
+<body>
+    <h1>Era uma vez...</h1>
+    <h2>Capítulo 1</h2>
+    <h3>Capítulo 1.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae...</p>
+    <h3>Capítulo 1.2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dolores!...</p>
+    <h2>Capítulo 2</h2>
+    <h3>Capítulo 2.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quam...</p>
+</body>
+</html>
+```
+
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/5e0ac22c-19f4-4f84-93fb-8d0b10d1c78a) 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/59717da5-9bda-453b-8c84-3eda0c052c67)
-(Site sem CSS)
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/093570c2-5967-45ea-b4c7-41a79194513d)
 (Site com CSS - cores apenas)
@@ -12,21 +32,73 @@ CSS, ou Cascading Style Sheets (Folhas de Estilo em Cascata, em tradução livre
 ## CSS aplicado no próprio código: inline style
 A forma mais simples de aplicar CSS é diretamente na própria tag HTML, utilizando o atributo style. No entanto, essa abordagem tem a desvantagem de ser difícil de manter. Por exemplo, se você precisar alterar a cor de fundo de vários textos no site, terá que modificar cada tag individualmente, o que pode ser muito trabalhoso. Apesar disso, essa forma de aplicação possui a maior prioridade na hierarquia de estilos CSS e pode ser muito útil para realizar ajustes específicos e pontuais.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/8e712d8c-c37f-428b-82ca-ae4bb2e18b98)
+``` html
+<body>
+    <h1 style="color: blue">Era uma vez...</h1>
+    <h2 style="color: red">Capítulo 1</h2>
+    <h3>Capítulo 1.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae...</p>
+    <h3>Capítulo 1.2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dolores!...</p>
+    <h2 style="color: red">Capítulo 2</h2>
+    <h3>Capítulo 2.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quam...</p>
+</body>
+```
 
 ## CSS aplicado ao cabeçalho: internal style
 Para aplicar estilos de forma mais dinâmica e prática, podemos adicionar uma tag &lt;style&gt; dentro da área &lt;head&gt; do nosso documento HTML local. A desvantagem desse método é que ele não aplicará os estilos a outras páginas do site. Se você tiver muitas páginas, precisará duplicar o estilo em cada uma delas, o que pode tornar o código muito extenso e difícil de gerenciar. Além disso, as regras CSS geralmente ocupam mais espaço que o próprio HTML, contribuindo para o aumento do tamanho total do documento.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/f074a89e-6858-439b-a433-305be2fbee23)
+``` html
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu site</title>
+    <style>
+      h1 {
+         color: blue;
+      }
+      h2 {
+         color: red;
+      }
+    </style>
+</head>
+<body>
+    <h1>Era uma vez...</h1>
+    <h2>Capítulo 1</h2>
+    <h3>Capítulo 1.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique beatae...</p>
+    <h3>Capítulo 1.2</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dolores!...</p>
+    <h2>Capítulo 2</h2>
+    <h3>Capítulo 2.1</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, quam...</p>
+</body>
+</html>
+```
 
 ## CSS mais versátil: external style
 Manter as folhas de estilo fora do código HTML proporciona uma maior organização e permite que os estilos sejam reutilizados de maneira mais eficiente em outras páginas do site. Para isso, utilizamos a tag &lt;link&gt;, especialmente configurada para trabalhar com arquivos de estilo externos. De preferência, coloque essa tag logo abaixo da tag &lt;title&gt; dentro da área <head> do documento.
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/0221755d-9ec0-424d-a716-7b70ad926803)
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/9bf3c6bb-4025-4f09-8b11-f38112480bd5) (Você pode escolher outro diretório como sua folha de estilo)
+``` html
+<link rel="stylesheet" href="style.css">
+```
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/3b3d56c4-00f6-4e6c-ac8c-a51badc38a17)
+``` css
+/* Regra @charset caso haja problemas com acentuação ou línguas com outros alfabetos */
+@charset "UTF-8";
+
+h1 {
+   color: blue;
+}
+h2 {
+   color: red;
+}
+```
 
 >[!TIP]
 > Nesses exemplos, você aprendeu apenas a trocar a cor da fonte, mas existem muitas outras funções que você pode aplicar na folha de estilo. Elas estão disponíveis nos sites da [Mozilla Developer Network (MDN)](https://developer.mozilla.org/en-US/docs/Web/CSS) e da [W3Schools](https://www.w3schools.com/cssref/index.php).
@@ -179,8 +251,25 @@ Ter uma paleta de cores bem definida é fundamental para o desenvolvimento de um
 ## Representação de cores nas CSS
   Nas CSS, as cores podem ser representadas de várias maneiras, permitindo uma flexibilidade considerável na criação de estilos e temas. Aqui estão as formas mais comuns de definir cores em CSS: **Nomes de cor**, **Valores hexadecimais**, **Valores em RGB (Red, Green e Blue)** e **Característica em HSL (Hue, Saturation e Luminosity).**
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4a136aaf-e6d1-4700-9b04-105ea9b7174f) (style.css)
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d9e5c48a-2f9c-424e-a78b-d7cc9ed8d8ac) (Efeito visual idêntico)
+
+``` css
+/* Regra @charset caso haja problemas com acentuação ou línguas com outros alfabetos */
+@charset "UTF-8";
+
+h1 {
+   color: brown;
+}
+h2 {
+   color: #a52a2a;
+}
+h3 {
+   color: rgb(165, 42, 42);
+}
+h4 {
+   color: hsl(0, 59%, 41%);
+}
+```
 
 >[!TIP]
 > A escolha do método de representação depende das necessidades do projeto. Valores hexadecimais são compactos e frequentemente usados, enquanto RGBA e HSLA oferecem controle adicional sobre a opacidade.
@@ -189,12 +278,40 @@ Ter uma paleta de cores bem definida é fundamental para o desenvolvimento de um
 Para adicionar um plano de fundo normal a um elemento em CSS, você usa a propriedade background-color para definir a cor de fundo desejada.
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/5f242d09-bbc3-4e43-817c-135488f08859)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/d3971203-5de8-4822-8ab3-8672ab90c6fa)
+
+``` css
+/* Regra @charset caso haja problemas com acentuação ou línguas com outros alfabetos */
+@charset "UTF-8";
+
+body {
+   background-color: black;
+}
+h1 {
+   color: white;
+}
+```
 
 Para adicionar um gradiente como plano de fundo, você utiliza a propriedade background-image com a função linear-gradient ou radial-gradient.
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/211cd14a-a45f-49b3-a76b-77e4eb16401b)
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/34b48429-5612-4845-a117-aed92cd04045)
+
+``` css
+/* Regra @charset caso haja problemas com acentuação ou línguas com outros alfabetos */
+@charset "UTF-8";
+
+/* Seletor global */
+* {
+   height: 100%;
+   background-attachment: fixed;
+}
+
+body {
+   background-image: linear-gradient(to top, #03000D, #1F2326, #363C40, #4F5559, #0D0D0D;
+}
+h1 {
+   color: white;
+}
+```
 
 Além das configurações de plano de fundo temos outras configurações pontuais que podemos fazer, por exemplo:
 * font-family: Tipo de fonte
@@ -222,11 +339,22 @@ A escolha de uma boa paleta de cores não é o único aspecto crucial na constru
 ### Como aplicar fontes as CSS?
 As fontes em CSS são aplicadas principalmente através da propriedade font-family. Essa propriedade permite que você especifique uma lista de fontes, onde a primeira fonte disponível no dispositivo do usuário será usada. Além disso, você pode ajustar vários aspectos das fontes com outras propriedades CSS, como font-size, font-weight, e font-style.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/94347430-0b16-421a-8ac7-07f2e55fe6db)
+``` css
+body {
+   font-family: "Arial", "Helvetica", sans-serif;
+   font-size: 16px;
+   font-weight: normal;
+   font-style: normal;
+}
+```
 
 A ordem aqui é importante: se a primeira fonte não for encontrada no dispositivo, o navegador tentará carregar a segunda, e assim por diante. O último item na lista é um tipo genérico de fonte. Podemos também fazer um atalho para todos esses comandos utilizando a propriedade font, prestando atenção na ordem dos valores.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/7fac3dca-ae84-4c63-b074-6c656da82262)
+``` css
+body {
+   font: italic bold 16px/1.5 "Arial", "Helvetica", sans-serif;
+}
+```
 
 1. font-style é o estilo da fonte, por exemplo: italic, normal, oblique etc.
 2. font-variant é a variante da fonte.
@@ -236,7 +364,16 @@ A ordem aqui é importante: se a primeira fonte não for encontrada no dispositi
 
 Além da font-family, você pode usar @font-face para importar fontes externas, por exemplo, do [Google fonts](fonts.google.com) ou [DaFont](dafont.com):
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/c3c6ec81-af8b-440b-9a49-7ddeea7036ac)
+``` css
+@font-face {
+   font-family: 'nome da fonte';
+   src: url('nome do arquivo da fonte') format('formato do arquivo');
+}
+
+body {
+   font-family: 'nome da fonte', sans-serif;
+}
+```
 
 Além disso, você pode incorporar um estilo embutido na primeira linha da sua tag &lt;style&gt;, seja dentro do próprio arquivo .html ou em uma folha de estilo separada (.css).
 
@@ -249,11 +386,33 @@ Além disso, você pode incorporar um estilo embutido na primeira linha da sua t
 # Seletores personalizados
 Às vezes, precisamos ser mais específicos quanto às modificações que queremos fazer nos elementos. É aí que entram os seletores personalizados. Antes de falar sobre isso, precisamos entender que utilizamos o id no HTML e # no CSS para identificar um elemento. Segundo a regra da W3C, só devemos ter um id por seletor em um documento. Já se quisermos agrupar várias características que serão usadas em diversos elementos específicos, podemos usar class no HTML e . no CSS. Veja abaixo como isso funciona:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a4ba1102-19d8-4de9-b97a-f84c423acb55) (Efeito visual)
+![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/a4ba1102-19d8-4de9-b97a-f84c423acb55)
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/86805582-725a-474d-80d6-ea20dfaef193) (HTML)
+``` html
+<body>
+   <h1>Primeiro</h1>
+   <h1 id="seg">Segundo</h1>
+   <h1 class="ter">Terceiro</h1>
+</body>
+```
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/1bb8fc41-d042-4dbf-a72c-0e1000e5eaca) (CSS)
+``` css
+/* Regra @charset caso haja problemas com acentuação ou línguas com outros alfabetos */
+@charset "UTF-8";
+
+h1 {
+   color: black;
+}
+
+h1#seg {
+   color: red;
+}
+
+/* Ou .ter */
+h1.ter {
+   color: blue;
+}
+```
 
 A hierarquia em CSS é baseada em IDs e classes. Seletores de ID (#id) têm maior prioridade que seletores de classe (.classe). Portanto, tudo que estiver dentro de um ID será considerado primeiro que tudo que estiver dentro de uma classe. Preste atenção à ordem e especificidade ao inserir os parâmetros.
 
@@ -280,26 +439,67 @@ Utilizamos o sinal de : para determinar uma pseudo-classe, que é aplicada a um 
 >[!TIP]
 > text-decoration: none; irá remover todos os efeitos do texto, inclusive o sublinhado dos links.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/9f525f88-8904-4ed5-a4b0-2d703c14e351)
+``` html
+<!--HTML5-->
+<body>
+   <div class="container">
+      <p>Este parágrafo está dentro da div.</p>
+   </div>
+</body>
+```
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/f7755c48-ac06-4a2f-928d-aa8cbeb7f2a9)
+``` css
+/* CSS3 */
+.container > p {
+   color: blue;
+   font-weight: bold;
+}
+```
 
 Utilizar seletores de filhos é importante para aplicar estilos de maneira específica e organizada, evitando a necessidade de classes adicionais desnecessárias. Isso permite um código CSS mais limpo e fácil de manter, garantindo que os estilos sejam aplicados somente onde desejado.
 
 ## Declarando uma variável
 Embora CSS não seja uma linguagem de programação, podemos declarar variáveis que facilitam muito nosso trabalho. Para criar variáveis para nossas configurações, devemos definir uma área de definições dentro do estilo usando a pseudo-classe :root. Essa pseudo-classe define configurações na raiz do documento, aplicando-as a todo o documento.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/54030cb0-b7c3-46e6-8e27-60c3ba3a947b)
+``` css
+:root {
+   --cor0: #c5ebd6;
+   --cor1: #83E1AD;
+   --cor2: #3DDC84;
+   --cor3: #2FA866;
+   --cor4: #1A5C37;
+   --cor5: #063d1e;
+   --fonte0: Arial, Helvetica, sans-serif;
+   --fonte1: 'Bebas Neue', cursive;
+   --fonte2: 'Android', sans-serif;
+}
+```
 
 A partir de agora, definir cores e fontes em nossos elementos HTML ficará mais fácil e personalizável, utilizando a função var().
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/0c4252a3-01bd-45f7-a673-f99099df1088)
+``` css
+body {
+   font-family: var(--fonte0);
+   color: var(--cor0);
+   background-color: var(--cor1);
+}
+```
 
 ## Pseudo-elementos
 São usados em CSS para aplicar estilos a partes específicas de elementos sem precisar adicionar classes ou IDs adicionais ao HTML. Eles permitem selecionar e estilizar subpartes de elementos, oferecendo um controle mais refinado sobre a aparência do conteúdo. Utilizamos o sinal :: para pseudo-elementos.
 * ::before e ::after são usados para inserir conteúdo antes ou depois do conteúdo real de um elemento. Eles são frequentemente utilizados para adicionar ícones, gráficos ou texto decorativo.
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/030560a8-f443-4675-9372-4b9ddbe21baa)
+``` css
+.container::before {
+   content: "Início: ";
+   color: green;
+}
+
+.container::after {
+   content: " Fim.";
+   color: red;
+}
+```
 
 Confira mais exemplos [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Pseudo-elements).
 
@@ -322,18 +522,76 @@ As tabelas em CSS são estilizadas para melhorar a aparência e a legibilidade d
   - bottom: Alinha o conteúdo à base da célula.
   - baseline: Alinha o conteúdo com a linha de base do texto dos elementos adjacentes.
 
+``` css
+table {
+   border: 1px solid black;
+}
+
+caption {
+   border: 1px solid red;
+}
+
+thead tr td {
+   border: 1px solid blue;
+}
+
+tbody tr td {
+   border: 1px solid yellow;
+}
+
+tfoot tr td {
+   border: 1px solid purple;
+}
+```
+
  ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/7a3dfd9b-e757-4c9b-bac2-b1166608eadf)
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/4755fe31-003b-4ec0-aed7-57b30712ebe8)
+``` css
+table {
+   border: 1px solid black;
+   border-collapse: collapse;
+}
+
+caption {
+   border: 1px solid red;
+}
+
+thead tr td {
+   border: 1px solid blue;
+}
+
+tbody tr td {
+   border: 1px solid yellow;
+}
+
+tfoot tr td {
+   border: 1px solid purple;
+}
+```
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/6720be2f-a747-4458-9c6b-c9132817cc5f)
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/82f2ec26-5255-4bfb-9544-993c5ab525af)
 
 ### Efeito zebrado
 Para criar um efeito zebrado usamos a pseudo-classe --> :nth-child(nº de linhas). Vejamos um exemplo:
 
-![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/9756c536-8a45-40b8-9629-6cbc132b748e)
+``` css
+thead tr td {
+   border: 1px solid blue;
+}
+
+thead tr td:nth-child(2n) {
+   background-color: gray;
+}
+
+tbody tr td {
+   border: 1px solid yellow;
+}
+
+tbody tr td:nth-child(2n-1) {
+   background-color: yellow;
+}
+```
 
 ![image](https://github.com/ReisLeonardo/html-css-js/assets/89877899/515d8783-1240-4282-8143-2c0f74f8a23b)
 
@@ -355,7 +613,20 @@ Media queries são uma funcionalidade do CSS3 que permitem aplicar estilos difer
 
 As media queries são definidas usando a regra @media no CSS.
 
-![image](https://github.com/ReisLeonardo/html-css/assets/89877899/af01a183-3b8c-41ef-b65e-a556e5106532)
+``` html
+<!--HTML5-->
+<link rel="stylesheet" media="(max-width: 800px)" href="style.css">
+```
+
+``` css
+/* CSS3 */
+
+@media (max-width: 600px) {
+   .facet_sidebar {
+      display: none;
+   }
+}
+```
 
 ## Versão para impressora
 Para aplicar estilos específicos ao imprimir um documento, você pode usar a media query print. Isso garante que o conteúdo seja exibido corretamente ao ser impresso.
