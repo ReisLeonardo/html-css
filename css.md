@@ -666,6 +666,9 @@ Flexbox é um layout de CSS3 projetado para fornecer uma maneira mais eficiente 
 ## Contêiner Flexível (Flex Container)
 No modelo de layout Flexbox em CSS, os contêineres são divididos em dois tipos principais: o contêiner pai (ou contêiner flex) e os contêineres filhos (ou itens flex).
 
+- Contêiner Pai: Configura o contexto flexível e define como os itens serão organizados.
+- Contêineres Filhos: São os itens flexíveis que podem crescer, encolher e serem organizados dentro do contêiner pai, de acordo com as regras estabelecidas por ele.
+
 ### Contêiner Pai (Contêiner Flex)
 O contêiner pai é o elemento que possui a propriedade ```display: flex```. Quando essa propriedade é aplicada, o contêiner pai se transforma em um contêiner flex, permitindo que todos os seus elementos filhos se comportem de acordo com as regras do Flexbox. O contêiner pai define o contexto em que os itens flexíveis (filhos) serão dispostos e controlados.
 
