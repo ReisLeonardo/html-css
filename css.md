@@ -664,21 +664,34 @@ Flexbox é um layout de CSS3 projetado para fornecer uma maneira mais eficiente 
 * **Flexbox:** Proporciona um layout flexível dentro de um container, ajudando a distribuir e alinhar itens de forma eficiente. Flexbox complementa media queries ao fornecer ferramentas para organizar e alinhar elementos dentro dos diferentes layouts definidos pelas media queries.
 
 ## Contêiner Flexível (Flex Container)
-Para começar a usar Flexbox, é necessário definir um contêiner flexível usando a propriedade display: flex;
+No modelo de layout Flexbox em CSS, os contêineres são divididos em dois tipos principais: o contêiner pai (ou contêiner flex) e os contêineres filhos (ou itens flex).
+
+### Contêiner Pai (Contêiner Flex)
+O contêiner pai é o elemento que possui a propriedade ```display: flex```. Quando essa propriedade é aplicada, o contêiner pai se transforma em um contêiner flex, permitindo que todos os seus elementos filhos se comportem de acordo com as regras do Flexbox. O contêiner pai define o contexto em que os itens flexíveis (filhos) serão dispostos e controlados.
 
 **Eixos no Flexbox**
 * **Eixo Principal (Main Axis):** É o eixo ao longo do qual os itens flexíveis são colocados. Pode ser horizontal ou vertical, dependendo da propriedade flex-direction.
 * **Eixo Cruzado (Cross Axis):** É perpendicular ao eixo principal. Se o eixo principal for horizontal, o eixo cruzado será vertical, e vice-versa.
 
-![image](https://github.com/ReisLeonardo/html-css/assets/89877899/3b92e909-8065-4dcf-8428-de91419c15da)
+**Principais propriedades aplicadas ao contêiner pai:**
+- ```flex-direction```: Define a direção em que os itens flexíveis serão dispostos (em linha, em coluna, etc.).
+- ```justify-content```: Controla o alinhamento dos itens ao longo do eixo principal (horizontal por padrão).
+- ```align-items```: Controla o alinhamento dos itens ao longo do eixo transversal (vertical por padrão).
+- ```flex-wrap```: Permite que os itens sejam quebrados em várias linhas, se necessário.
+- ```align-content```: Controla o espaçamento entre as linhas do contêiner quando há múltiplas linhas de itens flexíveis.
 
-**Direções no Flexbox**
-* **flex-direction:** Define a direção do eixo principal.
+![image](https://github.com/ReisLeonardo/html-css/assets/89877899/3b92e909-8065-4dcf-8428-de91419c15da)
 
 ![image](https://github.com/ReisLeonardo/html-css/assets/89877899/a1740b52-e73d-422c-a834-348ed2dbaaa3)
 
-**Propriedades do Flex Container**
-* **justify-content:** Alinha os itens ao longo do eixo principal (main-axis).
-* **align-items:** Alinha os itens ao longo do eixo cruzado.
+### Contêineres Filhos (Itens Flex)
+Os contêineres filhos, ou itens flex, são os elementos diretos dentro de um contêiner pai flexível. Esses itens herdam o comportamento flexível e podem ser controlados individualmente usando várias propriedades CSS. Eles são dispostos de acordo com as regras estabelecidas pelo contêiner pai.
+
+**Principais propriedades aplicadas aos contêineres filhos:**
+- ```flex-grow```: Define a capacidade de um item de crescer para preencher o espaço disponível no contêiner.
+- ```flex-shrink```: Controla o quanto um item pode encolher quando o espaço no contêiner é limitado.
+- ```flex-basis```: Especifica o tamanho inicial de um item antes de ele crescer ou encolher.
+- ```align-self```: Permite que um item seja alinhado de forma diferente dos outros ao longo do eixo transversal.
+- ```order```: Determina a ordem de exibição dos itens, independentemente da ordem em que aparecem no HTML.
 
 Aprenda mais sobre flexbox na documentação da linguagem disponível [aqui](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox).
